@@ -63,7 +63,7 @@ const commands = {
     },
 
     about: () => {
-        store.dispatch("pushBlock", parse("Website created with VueJS 2019."))
+        store.dispatch("pushBlock", parse("Website created with VueJS 2019. (version 1.2)"))
     },
 
     profile: () => {
