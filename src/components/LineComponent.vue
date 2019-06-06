@@ -1,5 +1,5 @@
 <template>
-    <a v-if="line.type == 'command'" v-on:click="commandClick">{{line.text}}</a>
+    <a v-if="line.type == 'command'" v-on:click="commandClick">> {{line.text}}</a>
     <a v-else-if="line.type == 'image'" v-on:click="imageClick">{{line.text}} &#10063;</a>
     <a v-else-if="line.type == 'link'" :href="line.text" target="_blank">{{line.text}} &#8599;</a>
     <span v-else-if="line.type == 'text'">{{line.text}}</span>
@@ -27,7 +27,7 @@ export default {
         },
         commandClick: function (event) {
             const text = event.target.outerText;
-            this.$parent.$parent.peformLogic(text);
+            this.$parent.$parent.peformLogic(text.substring(2));
         },
         imageClick: function(event) {
             const text = event.target.outerText;
@@ -60,5 +60,9 @@ a {
     color: #b1b1ff;
     cursor: pointer;
     /* text-decoration: underline; */
+}
+
+a:hover {
+    color: var(--white);
 }
 </style>

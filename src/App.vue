@@ -33,7 +33,7 @@ export default {
 body {
   --black: #2b2b2b;
   --white: #dddddd;
-  --font-size: 16px;
+  --font-size: 15px;
   background-color: var(--black);
   color: var(--white);
   font-family: 'Source Code Pro', monospace;

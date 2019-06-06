@@ -4,8 +4,9 @@
             <LineComponent :line="line"></LineComponent>
         </div>
         <div id="popup" v-if="image != ''">
-            <img v-if="image == 'fish.jpg'" src="../assets/fish.jpg">
-            <img v-if="image == 'brocc.jpg'" src="../assets/brocc.jpg">
+            <img v-if="image == 'room_acoustics.jpg'" src="../assets/room_acoustics.jpg">
+            <img v-if="image == 'trapit.jpg'" src="../assets/trapit.jpg">
+            <img v-if="image == 'second_wind.jpg'" src="../assets/second_wind.jpg">
             <div id="close" v-on:click="close"></div>
         </div>
     </div>
@@ -38,6 +39,10 @@ export default {
 </script>
 
 <style scoped>
+#cli {
+    margin-bottom: 31px;
+}
+
 #cli > div {
   min-height: 20px;
 }

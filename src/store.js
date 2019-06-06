@@ -30,7 +30,7 @@ export default new Vuex.Store({
   },
   actions: {
     pushBlock (context, block) {
-      const delay = block.isLong ? 500 : 50;
+      const delay = block.isLong ? 500 : 40;
       const lines = block.lines;
       const callback = block.callback;
       const progress = block.progress;
@@ -42,7 +42,9 @@ export default new Vuex.Store({
           return;
         }
         this.commit("push", currentLine);
-        focus();
+        if (lines.length < 40) {
+          focus();
+        }
 
         // focus();
         
