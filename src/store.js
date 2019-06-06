@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import LineClass from './classes/LineClass';
 import focus from "./util/focus.js";
+import config from "./config.js";
 
 Vue.use(Vuex)
 
@@ -9,7 +10,7 @@ export default new Vuex.Store({
   state: {
     lines: [],
     image: "",
-    version: "1.3"
+    version: config.version
   },
   mutations: {
     push (state, line) {
@@ -31,7 +32,7 @@ export default new Vuex.Store({
   },
   actions: {
     pushBlock (context, block) {
-      const delay = block.isLong ? 500 : 40;
+      const delay = block.isLong ? config.slowBlockDelay : config.fastBlockDelay;
       const lines = block.lines;
       const callback = block.callback;
       const progress = block.progress;
@@ -43,7 +44,7 @@ export default new Vuex.Store({
           return;
         }
         this.commit("push", currentLine);
-        if (lines.length < 40) {
+        if (lines.length < config.maxLinesUntilNoFocus) {
           focus();
         }
 

@@ -1,10 +1,10 @@
 <template>
-    <a v-if="line.type == 'command'" v-on:click="commandClick">> {{line.text}}</a>
-    <a v-else-if="line.type == 'image'" v-on:click="imageClick">{{line.text}} &#10063;</a>
-    <a v-else-if="line.type == 'link'" :href="line.text" target="_blank">{{line.text}} &#8599;</a>
+    <a v-if="line.type == 'command'" v-on:click="commandClick">{{cmdbefore+line.text+cmdafter}}</a>
+    <a v-else-if="line.type == 'image'" v-on:click="imageClick">{{imgbefore+line.text+imgafter}}</a>
+    <a v-else-if="line.type == 'link'" :href="line.text" target="_blank">{{lnkbefore+line.text+lnkafter}}</a>
     <span v-else-if="line.type == 'text'">{{line.text}}</span>
     <span v-else-if="line.type == 'input'">
-        $> 
+        {{prompt}}
         <form v-on:submit.prevent="handleSubmit" autocomplete="off">
             <input id="input">
         </form>
@@ -14,11 +14,24 @@
 <script>
 import LineClass from '../classes/LineClass.js';
 import store from "../store.js";
+import config from "../config.js";
+import focus from '../util/focus';
 
 export default {
     name: 'LineComponent',
     props: {
         line: LineClass
+    },
+    data() {
+        return {
+            cmdbefore: config.commandIconBefore,
+            cmdafter: config.commandIconAfter,
+            imgbefore: config.imageIconBefore,
+            imgafter: config.imageIconAfter,
+            lnkbefore: config.linkIconBefore,
+            lnkafter: config.linkIconAfter,
+            prompt: config.promptSymbols,
+        }
     },
     methods: {
         handleSubmit: function () {
@@ -26,15 +39,24 @@ export default {
             this.$parent.$parent.peformLogic(input);
         },
         commandClick: function (event) {
-            const text = event.target.outerText;
-            this.$parent.$parent.peformLogic(text.substring(2));
+            let text = event.target.outerText;
+
+            // gets text without the icons before / after
+            text = text.substring(
+                config.commandIconBefore.length, 
+                text.length - config.commandIconAfter.length
+            );
+            this.$parent.$parent.peformLogic(text);
         },
         imageClick: function(event) {
-            const text = event.target.outerText;
-            store.commit("setImage", text.substring(0, text.length - 2));
-            // console.log(text);
-            
-            // popup.image = "images/" + text.substring(0, text.length - 2);
+            let text = event.target.outerText;
+
+            // gets text without the icons before / after
+            text = text.substring(
+                config.imageIconBefore.length,
+                text.length - config.imageIconAfter.length
+            )
+            store.commit("setImage", text);
         }
     }
 }
@@ -57,7 +79,7 @@ input:focus {
 }
 
 a {
-    color: #b1b1ff;
+    color: var(--blue);
     cursor: pointer;
     /* text-decoration: underline; */
 }

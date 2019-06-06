@@ -14,6 +14,7 @@ export default {
         commands.clear();
         commands.startup();
     },
+    change_theme: () => commands.theme(),
     help: () => commands.help(),
     "?": () => commands.help(),
     about: () => commands.about()

@@ -1,7 +1,7 @@
 <template>
     <div id="cli">
         <div v-for="(line, index) in lines" v-bind:key="index">
-            <LineComponent :line="line"></LineComponent>
+            <LineComponent :class="line.type" :line="line"></LineComponent>
         </div>
         <div id="popup" v-if="image != ''">
             <img v-if="image == 'room_acoustics.jpg'" src="../assets/room_acoustics.jpg">
@@ -37,10 +37,6 @@ export default {
 </script>
 
 <style scoped>
-#cli {
-    margin-bottom: 31px;
-}
-
 #cli > div {
   min-height: 20px;
 }
@@ -62,7 +58,7 @@ export default {
 }
 
 #popup > img {
-    max-width: 70vw;
+    max-width: 93vw;
     max-height: 70vh;
     grid-area: mid;
     box-shadow: black 0 0 100px;

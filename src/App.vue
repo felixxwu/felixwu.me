@@ -31,14 +31,19 @@ export default {
 
 <style>
 body {
-  --black: #2b2b2b;
-  --white: #dddddd;
+  --black: #222222;
+  --white: #eeeeee;
+  --blue: #b1b1ff;
   --font-size: 15px;
   background-color: var(--black);
   color: var(--white);
   font-family: 'Source Code Pro', monospace;
   font-size: var(--font-size);
-  margin-bottom: 0;
+  margin-bottom: 30px;
+}
+
+html {
   overflow-x: hidden;
 }
+
 </style>

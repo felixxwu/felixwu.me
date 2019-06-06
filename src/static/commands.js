@@ -3,6 +3,7 @@ import store from "../store.js";
 import LineClass from "../classes/LineClass.js";
 import Block from "../classes/Block.js";
 import logic from "./logic.js";
+import config from "../config.js";
 
 const commands = {
     help: () => {
@@ -65,6 +66,18 @@ const commands = {
 
     about: () => {
         store.dispatch("pushBlock", parse("Website created with VueJS 2019. Version " + store.state.version))
+    },
+
+    theme: () => {
+        const white = window.getComputedStyle(document.body).getPropertyValue("--white");
+        const black = window.getComputedStyle(document.body).getPropertyValue("--black");
+        const blue = window.getComputedStyle(document.body).getPropertyValue("--blue");
+        document.body.style.setProperty("--white", black);
+        document.body.style.setProperty("--black", white);
+        document.body.style.setProperty("--blue", config.secondBlue);
+        config.secondBlue = blue;
+
+        store.dispatch("pushBlock", new Block([new LineClass("", "input")]));
     },
 
     profile: () => {
@@ -203,7 +216,7 @@ const commands = {
     skills: () => {
         store.dispatch("pushBlock", parse(`
             Spoken languages:
-            English: fluent, German: fluent, Cantonese: conversational.
+            English: fluent | German: fluent | Cantonese: conversational
 
             Most competent in:
             Javascript | Java | Python | Vue.js | React.js | Node.js | PHP | HTML / CSS | SQL | Android (Java/Kotlin) | Object Oriented Programming
