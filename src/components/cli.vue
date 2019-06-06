@@ -32,7 +32,6 @@ export default {
     methods: {
         close () {
             this.$store.commit("setImage", "");
-            focus();
         }
     },
 }

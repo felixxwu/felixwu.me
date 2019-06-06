@@ -39,5 +39,6 @@ body {
   font-family: 'Source Code Pro', monospace;
   font-size: var(--font-size);
   margin-bottom: 0;
+  overflow-x: hidden;
 }
 </style>
