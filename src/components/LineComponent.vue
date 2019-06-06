@@ -34,7 +34,7 @@ export default {
     },
     methods: {
         handleSubmit: function () {
-            const input = document.getElementById("input").value;
+            const input = document.getElementById("input").value.toLowerCase();
             this.$parent.$parent.peformLogic(input);
         },
         commandClick: function (event) {
@@ -71,6 +71,7 @@ input, form {
     font-size: var(--font-size);
     width: calc(100% - var(--font-size) * 3);
     display: inline-block;
+    text-transform: lowercase;
 }
 
 input:focus {
