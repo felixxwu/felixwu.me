@@ -13,7 +13,7 @@ export default {
 
     linkIdentifier: "$lnk ",
     linkIconBefore: "",
-    linkIconAfter: " 🡭",
+    linkIconAfter: "",
     promptSymbols: "$> ", // if this is changed also change input width (css)
     focusDelay: 300,
     secondBlue: "#006989",
