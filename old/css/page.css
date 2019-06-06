@@ -1,0 +1,36 @@
+.page {
+    grid-area: right;
+    height: 100%;
+}
+
+.page > img {
+    max-width: 80%;
+    max-height: 50vh;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.7));
+}
+
+.title {
+    font-family: 'Staatliches', cursive;
+    font-size: xx-large;
+}
+
+.mobile-page {
+    padding: 20px;
+    text-align: justify;
+    padding-top: 50px;
+    background-color: var(--offwhite);
+}
+
+.mobile-img {
+    --img-size: 250px;
+    margin: auto;
+    width: var(--img-size);
+    height: var(--img-size);
+    border-radius: 50%;
+}
+
+.mobile-img > img {
+    max-width: var(--img-size);
+    max-height: var(--img-size);
+    filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.7));
+}

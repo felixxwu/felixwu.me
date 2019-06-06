@@ -1,0 +1,17 @@
+#profile {
+    text-align: center;
+}
+
+#profile > .title {
+    padding: 30px;
+}
+
+#profile-picture {
+    border-radius: 100vh;
+    width: 130px;
+}
+
+.bio {
+    max-width: 400px;
+    margin: auto;
+}

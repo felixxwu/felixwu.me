@@ -1,0 +1,56 @@
+#side {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#panel {
+    grid-area: left;
+    background-color: var(--offwhite);
+    /* box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.5); */
+}
+
+#side-content {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#all-side-content {
+    padding: 20px;
+    padding-top: 50px;
+    padding-right: 0;
+    height: calc(100% - 70px);
+}
+
+#close {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 15px;
+    font-size: xx-large;
+}
+
+.nav {
+    cursor: pointer;
+    padding: 10px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 100px;
+}
+
+.button {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--offwhite);
+    margin: 20px;
+    margin-bottom: 0;
+    padding: 20px;
+    border-radius: 35px;
+}

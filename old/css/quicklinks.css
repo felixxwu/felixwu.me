@@ -1,0 +1,38 @@
+
+.quicklinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.quicklink {
+    display: block;
+    color: var(--offblack);
+    text-decoration: none;
+    margin: auto;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    width: calc(100% - 40px);
+}
+
+.quicklinks > .quicklink:hover,
+#contactLinks > .quicklink:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.quicklink img {
+    width: 32px;
+    padding-bottom: 10px;
+    filter: brightness(35%);
+}
+
+#contactLinks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
