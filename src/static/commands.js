@@ -37,6 +37,7 @@ const commands = {
             new Block(
                 [
                     new LineClass("Starting OS..."),
+                    new LineClass("Version " + store.state.version),
                     new LineClass("Loading assets..."),
                     new LineClass("Loading components..."),
                     new LineClass("Loading profile (Felix Wu)..."),
@@ -63,7 +64,7 @@ const commands = {
     },
 
     about: () => {
-        store.dispatch("pushBlock", parse("Website created with VueJS 2019. (version 1.2)"))
+        store.dispatch("pushBlock", parse("Website created with VueJS 2019. Version " + store.state.version))
     },
 
     profile: () => {

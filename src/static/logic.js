@@ -1,6 +1,4 @@
 import commands from "./commands.js";
-import store from "../store.js";
-import parse from "../util/parse.js";
 
 export default {
     profile: () => commands.profile(),

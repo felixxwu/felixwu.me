@@ -8,7 +8,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     lines: [],
-    image: ""
+    image: "",
+    version: "1.3"
   },
   mutations: {
     push (state, line) {

@@ -14,7 +14,6 @@
 
 <script>
 import LineComponent from "./LineComponent.vue";
-import focus from "../util/focus.js";
 
 export default {
     name: "cli",
