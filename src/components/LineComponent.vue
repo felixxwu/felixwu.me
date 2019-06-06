@@ -15,7 +15,6 @@
 import LineClass from '../classes/LineClass.js';
 import store from "../store.js";
 import config from "../config.js";
-import focus from '../util/focus';
 
 export default {
     name: 'LineComponent',
