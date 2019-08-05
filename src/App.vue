@@ -37,10 +37,20 @@ body {
   --font-size: 15px;
   background-color: var(--black);
   color: var(--white);
-  font-family: 'Source Code Pro', monospace;
   font-size: var(--font-size);
   margin-bottom: 30px;
   overflow-wrap: break-word;
+  /* font-family: 'Fira Code', monospace; */
+}
+
+* {
+  font-family: monospace, monospace;
+}
+
+h1 {
+  font-size: 50px;
+  font-style: italic;
+  font-weight: lighter;
 }
 
 html {

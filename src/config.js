@@ -1,7 +1,10 @@
 export default {
     slowBlockDelay: 350,
     fastBlockDelay: 40,
-    maxLinesUntilNoFocus: 40,
+    maxLinesUntilNoFocus: 400,
+
+    bigFontIdentifier: "$h1 ",
+    boldFontIdentifier: "$b ",
 
     commandIdentifier: "$cmd ",
     commandIconBefore: "> ",
@@ -17,6 +20,6 @@ export default {
     promptSymbols: "$> ", // if this is changed also change input width (css)
     focusDelay: 300,
     secondBlue: "#006989",
-    
-    version: "1.7"
+
+    version: "1.8"
 }

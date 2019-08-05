@@ -2,11 +2,13 @@
     <a v-if="line.type == 'command'" v-on:click="commandClick">{{cmdbefore+line.text+cmdafter}}</a>
     <a v-else-if="line.type == 'image'" v-on:click="imageClick">{{imgbefore+line.text+imgafter}}</a>
     <a v-else-if="line.type == 'link'" :href="line.text" target="_blank">{{lnkbefore+line.text+lnkafter}}</a>
+    <h1 v-else-if="line.type == 'h1'">{{line.text}}</h1>
+    <b v-else-if="line.type == 'bold'">{{line.text}}</b>
     <span v-else-if="line.type == 'text'">{{line.text}}</span>
     <span v-else-if="line.type == 'input'">
         {{prompt}}
         <form v-on:submit.prevent="handleSubmit" autocomplete="off">
-            <input id="input">
+            <input id="input" placeholder="_">
         </form>
     </span>
 </template>
