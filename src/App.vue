@@ -40,6 +40,7 @@ body {
   font-family: 'Source Code Pro', monospace;
   font-size: var(--font-size);
   margin-bottom: 30px;
+  overflow-wrap: break-word;
 }
 
 html {
