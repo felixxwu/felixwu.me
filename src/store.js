@@ -42,7 +42,9 @@ export default new Vuex.Store({
         currentLine.text.length / config.expectedLineWidth + 1 :
         1;
 
-      setTimeout(() => {
+      clearTimeout(context.state.timeout)
+
+      context.state.timeout = setTimeout(() => {
         if (progress >= lines.length) {
           if (callback) {callback()}
           return;

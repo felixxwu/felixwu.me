@@ -40,7 +40,7 @@ export default {
             this.$parent.$parent.peformLogic(input);
         },
         commandClick: function (event) {
-            let text = event.target.outerText;
+            let text = event.target.innerText;
 
             // gets text without the icons before / after
             text = text.substring(
@@ -50,7 +50,7 @@ export default {
             this.$parent.$parent.peformLogic(text);
         },
         imageClick: function(event) {
-            let text = event.target.outerText;
+            let text = event.target.innerText;
 
             // gets text without the icons before / after
             text = text.substring(

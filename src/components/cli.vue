@@ -49,8 +49,12 @@ export default {
 </script>
 
 <style scoped>
+#cli {
+    padding: 10px;
+}
+
 #cli > div {
-  min-height: 20px;
+    min-height: 20px;
 }
 
 #popup {
@@ -81,7 +85,7 @@ export default {
     position: fixed;
     width: 100%;
     height: 100%;
-    cursor: pointer;
+    cursor: zoom-out;
     display: block;
 }
 </style>

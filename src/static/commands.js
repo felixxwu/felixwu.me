@@ -25,8 +25,8 @@ const commands = {
         store.dispatch("pushBlock",
             new Block([
                 new LineClass(
-                    command +
-                        ' is an unrecognised command. Type "help" or "?" for a list of commands.'
+                    '"' + command +
+                        '" is an unrecognised command. Type "help" or "?" for a list of commands.'
                 ),
                 new LineClass("", "input")
             ])
@@ -103,7 +103,7 @@ const commands = {
             $b LinkedIn:
             $lnk https://www.linkedin.com/in/felixxwu/
 
-            $b Click to navigate to:
+            $b Click or type to navigate:
 
             $cmd work_experience
 
@@ -292,7 +292,7 @@ const commands = {
 
             $b Back to profile:
             $cmd profile
-        `))
+        `, true))
     }
 };
 
