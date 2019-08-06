@@ -49,7 +49,6 @@ body {
 
 h1 {
   font-size: 50px;
-  font-style: italic;
   font-weight: lighter;
 }
 
