@@ -40,16 +40,17 @@ body {
   font-size: var(--font-size);
   margin-bottom: 30px;
   overflow-wrap: break-word;
-  /* font-family: 'Fira Code', monospace; */
 }
 
 * {
-  font-family: monospace, monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 h1 {
-  font-size: 50px;
-  font-weight: lighter;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 100;
+  font-family: 'Unica One', cursive;
 }
 
 html {

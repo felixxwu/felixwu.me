@@ -2,7 +2,7 @@ import LineClass from "../classes/LineClass.js"
 import Block from "../classes/Block.js";
 import config from "../config.js";
 
-export default function parse(text) {
+export default function parse(text, focusAll = false) {
     const split = text.split("\n");
 
     const lines = split.map(line => {
@@ -26,6 +26,8 @@ export default function parse(text) {
     });
 
     lines.push(new LineClass("", "input"));
-    
+
+    if (focusAll) return new Block(lines, false, () => {}, 0, true)
+
     return new Block(lines);
 }

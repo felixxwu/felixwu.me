@@ -38,22 +38,24 @@ export default new Vuex.Store({
       const progress = block.progress;
       const currentLine = lines[progress];
 
+      const delayMultiplier = currentLine ? 
+        currentLine.text.length / config.expectedLineWidth + 1 :
+        1;
+
       setTimeout(() => {
         if (progress >= lines.length) {
           if (callback) {callback()}
           return;
         }
         this.commit("push", currentLine);
-        if (lines.length < config.maxLinesUntilNoFocus) {
+        if (progress < config.maxLinesUntilNoFocus || block.focusAll) {
           focus();
         }
 
-        // focus();
-        
         // new recursive call
         block.progress++;
         this.dispatch("pushBlock", block);
-      }, delay);
+      }, delay * delayMultiplier);
     },
     clear () {
       this.commit("popAll");

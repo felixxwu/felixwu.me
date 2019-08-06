@@ -41,7 +41,8 @@ const commands = {
                     new LineClass("Version " + store.state.version),
                     new LineClass("Loading components..."),
                     new LineClass("Loading image files..."),
-                    new LineClass("Loading profile #23..."),
+                    new LineClass("Loading pages..."),
+                    new LineClass("Loading profile..."),
                     new LineClass(""),
                     new LineClass("Done.", "bold"),
                     new LineClass("Launching..."),
@@ -65,7 +66,7 @@ const commands = {
     },
 
     about: () => {
-        store.dispatch("pushBlock", parse("Website created with VueJS 2019. Version " + store.state.version))
+        store.dispatch("pushBlock", parse("Website created with VueJS (2019). Version " + store.state.version))
     },
 
     theme: () => {
@@ -112,13 +113,16 @@ const commands = {
 
             $cmd technical_skills
 
-            Type "help" or "?" for a list of available commands.`
+            Type "help" or "?" for a list of available commands.`,
+            true
         ));
     },
 
     work: () => {
         store.dispatch("pushBlock", parse(
             `
+            $h1 WORK EXPERIENCE
+
             $b TRAPIT WEBSITE DESIGN (Freelance, 2018)
             Successfully developed and delivered a blog-like page for the owner of the electronic music YouTube promotion channel "TrapIt", with editor-exclusive interface for the creation and alteration of posts. Applied requirement analysis knowledge from the Software Engineering course at Edinburgh to undertake stakeholder interviews, meetings, requirements specification and use-case documents.
             $img trapit.jpg
@@ -148,6 +152,8 @@ const commands = {
 
     projects: () => {
         store.dispatch("pushBlock", parse(`
+            $h1 PERSONAL PROJECTS
+
             $b NOXIVE
             Noxive is my alias for my electronic music production hobby. So far I have gained over 500k views across YouTube, SoundCloud and Spotify, and generated a small income of $400 from royalties. I have had the opportunity to collaborate with many talented artists over the last few years, improving my communication and feedback skills.
             $lnk https://soundcloud.com/noxive
@@ -216,6 +222,8 @@ const commands = {
 
     courses: () => {
         store.dispatch("pushBlock", parse(`
+            $h1 UNIVERSITY COURSES
+
             $b COURSES COMPLETED AT EDINBURGH:
 
             Software Testing,
@@ -252,6 +260,8 @@ const commands = {
 
     skills: () => {
         store.dispatch("pushBlock", parse(`
+            $h1 TECHNICAL SKILLS
+
             $b SPOKEN LANGUAGES:
             English: fluent,
             German: fluent,

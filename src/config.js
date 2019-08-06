@@ -1,7 +1,8 @@
 export default {
-    slowBlockDelay: 350,
-    fastBlockDelay: 40,
-    maxLinesUntilNoFocus: 400,
+    slowBlockDelay: 300,
+    fastBlockDelay: 20,
+    maxLinesUntilNoFocus: 4,
+    expectedLineWidth: 80,
 
     bigFontIdentifier: "$h1 ",
     boldFontIdentifier: "$b ",

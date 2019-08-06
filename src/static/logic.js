@@ -1,7 +1,10 @@
 import commands from "./commands.js";
 
 export default {
-    profile: () => commands.profile(),
+    profile: () => {
+        // commands.clear();
+        commands.profile();
+    },
     work_experience: () => commands.work(),
     personal_projects: () => commands.projects(),
     university_courses: () => commands.courses(),
