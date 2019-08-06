@@ -39,10 +39,14 @@ export default {
   font-family: 'Source Code Pro', monospace;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: var(--white);
   margin: 0;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   display: grid;
   grid-template-areas:
