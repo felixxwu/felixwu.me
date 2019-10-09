@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+/public/bpm
+/public/subfolder_in_public
 
 # local env files
 .env.local
