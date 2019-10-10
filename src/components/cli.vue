@@ -53,7 +53,7 @@ export default {
     padding: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   #cli {
       padding-bottom: 100px;
   }

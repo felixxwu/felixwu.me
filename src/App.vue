@@ -37,6 +37,7 @@ export default {
   --blue: #b1b1ff;
   --font-size: 15px;
   font-family: 'Source Code Pro', monospace;
+  font-size: large;
 }
 
 html {
@@ -66,7 +67,7 @@ body {
   font-size: var(--font-size);
   overflow-wrap: break-word;
   height: 88vh;
-  width: 800px;
+  width: 900px;
   max-width: 100vw;
   box-shadow: 0 0 80px var(--black);
   overflow-y: scroll;
@@ -83,7 +84,7 @@ html {
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   #app {
     border: none;
     border-radius: 0;

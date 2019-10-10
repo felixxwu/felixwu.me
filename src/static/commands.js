@@ -292,7 +292,7 @@ const commands = {
 
             $b Back to profile:
             $cmd profile
-        `, true))
+        `))
     }
 };
 
