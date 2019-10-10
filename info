@@ -1,0 +1,14 @@
+to change where vue build outputs go:
+yarn build --dest "folder"
+
+to change <%= BASE_URL %> in public/index.html:
+create a file called vue.config.js with
+module.exports = { publicPath: "/subfolder/" }
+
+current setup:
+subfolders can be vue projects, they are setup to be deployed as subdirectories
+subfolders like _bpm/ are set to build into public/bpm/ using "yarn build --dest ../public/bpm"
+they are also set to fetch resources using a /bpm/ path before the link
+so in public/bpm/index.html you have things like src="/bpm/app.js"
+then when you yarn build from / the contents of public/ are copied to dist/ including public/bpm/
+now dist/bpm/index.html links files properly
