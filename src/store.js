@@ -50,9 +50,11 @@ export default new Vuex.Store({
           return;
         }
         this.commit("push", currentLine);
-        if (progress < config.maxLinesUntilNoFocus || block.focusAll) {
-          focus();
-        }
+        
+        focus();
+        // if (progress < config.maxLinesUntilNoFocus || block.focusAll) {
+        //   focus();
+        // }
 
         // new recursive call
         block.progress++;
