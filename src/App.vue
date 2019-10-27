@@ -21,6 +21,9 @@ export default {
       store.commit("submitInput", input);
       if (logic[input]) {
         logic[input]();
+      } else if (commands[input]) {
+        commands.clear();
+        commands[input]();
       } else {
         commands.unrecognised(input);
       }
@@ -33,11 +36,11 @@ export default {
 * {
   --black: #222222;
   --black-lighter: #333333;
-  --white: #eeeeee;
+  --white: #dddddd;
   --blue: #b1b1ff;
-  --font-size: 15px;
-  font-family: 'Source Code Pro', monospace;
-  font-size: large;
+  --font-size: 17px;
+  font-family: monospace;
+  /* font-family: 'Source Code Pro', monospace; */
 }
 
 html {
@@ -66,7 +69,7 @@ body {
   color: var(--white);
   font-size: var(--font-size);
   overflow-wrap: break-word;
-  height: 88vh;
+  height: 92vh;
   width: 900px;
   max-width: 100vw;
   box-shadow: 0 0 80px var(--black);

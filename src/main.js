@@ -10,7 +10,7 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-commands.startup();
+commands.reboot();
 document.onkeypress = () => {
   document.getElementById("input") && document.getElementById("input").focus();
 }

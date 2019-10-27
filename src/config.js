@@ -1,7 +1,7 @@
 export default {
     slowBlockDelay: 300,
     fastBlockDelay: 20,
-    maxLinesUntilNoFocus: 2,
+    maxLinesUntilNoFocus: 50,
     expectedLineWidth: 80,
 
     bigFontIdentifier: "$h1 ",
@@ -22,5 +22,5 @@ export default {
     focusDelay: 300,
     secondBlue: "#006989",
 
-    version: "1.11"
+    version: "1.12"
 }
