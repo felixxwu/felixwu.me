@@ -22,5 +22,5 @@ export default {
     focusDelay: 300,
     secondBlue: "#006989",
 
-    version: "1.12"
+    version: "1.13"
 }

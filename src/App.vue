@@ -9,6 +9,8 @@ import cli from "./components/cli.vue";
 import store from "./store.js";
 import logic from "./static/logic.js";
 import commands from "./static/commands.js";
+import LineClass from "./classes/LineClass.js";
+import Block from "./classes/Block.js";
 
 export default {
   name: "app",
@@ -16,8 +18,53 @@ export default {
     cli
   },
   store,
+  data() {
+    return {
+      history: [],
+      selectedHistory: 0
+    }
+  },
+  created() {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowUp") {
+        if (this.selectedHistory >= this.history.length) return;
+        this.selectedHistory++;
+        const input = document.getElementById("input");
+        const value = this.history[this.history.length - this.selectedHistory];
+        value & (input.value = value);
+      }
+      if (e.key === "ArrowDown") {
+        if (this.selectedHistory <= 0) return;
+        this.selectedHistory--;
+        const input = document.getElementById("input");
+        const value = this.selectedHistory === 0 ? "" :
+          this.history[this.history.length - this.selectedHistory]
+        input.value = value;
+      }
+      if (e.key === "Tab") {
+        e.preventDefault();
+        const input = document.getElementById("input");
+        const suggestions = commands.KEYS().filter(key => key.startsWith(input.value));
+        if (suggestions.length === 1) {
+          input.value = suggestions[0];
+        }
+        if (suggestions.length > 1) {
+          const value = input.value;
+          store.commit("submitInput", value);
+          store.dispatch("pushBlock", new Block(
+            [
+              new LineClass(suggestions.join(", ")),
+              new LineClass(value, "input")
+            ]
+          ))
+        }
+      }
+    })
+  },
   methods: {
-    peformLogic: (input) => {
+    peformLogic(input) {
+      this.history.push(input);
+      this.selectedHistory = 0;
       store.commit("submitInput", input);
       if (logic[input]) {
         logic[input]();

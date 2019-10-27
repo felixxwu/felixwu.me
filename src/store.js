@@ -21,7 +21,7 @@ export default new Vuex.Store({
     },
     submitInput (state, input) {
       this.commit("pop");
-      this.commit("push", new LineClass("$> " + input));
+      this.commit("push", new LineClass(config.promptSymbols + input));
     },
     popAll (state) {
       while (state.lines.pop() != null);

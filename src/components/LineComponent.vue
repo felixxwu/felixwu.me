@@ -8,7 +8,8 @@
     <span v-else-if="line.type == 'input'">
         {{prompt}}
         <form v-on:submit.prevent="handleSubmit" autocomplete="off">
-            <input id="input" placeholder="_">
+            <input id="input" :value="line.text">
+            <!-- <input id="input" placeholder="_"> -->
         </form>
     </span>
 </template>
