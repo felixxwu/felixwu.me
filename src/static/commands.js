@@ -73,7 +73,7 @@ const commands = {
     // ██║╸╸╸╸██████╗██████╗██║██╔╝╸██╗╸╸╸╚███╔███╔╝╚█████╔╝
     // ╚═╝╸╸╸╸╚═════╝╚═════╝╚═╝╚═╝╸╸╚═╝╸╸╸╸╚══╝╚══╝╸╸╚════╝
 
-    profile: () => {
+    home: () => {
         store.dispatch("pushBlock", parse(
             `$h1 FELIX WU
             Fourth year Computer Science student at The University of Edinburgh.
@@ -126,8 +126,8 @@ const commands = {
             Parents' Evening Modelling and Proposal (2016)
             $cmd parents
 
-            $b Back to profile
-            $cmd profile
+            $b Back to home
+            $cmd home
             `
         ))
     },
@@ -141,8 +141,9 @@ const commands = {
 
             $img trapit.jpg
 
-            $b Back to work experience
+            $b Go back
             $cmd work
+            $cmd home
             `
         ))
     },
@@ -157,8 +158,9 @@ const commands = {
             $lnk https://vdgs.org.uk/
             $img vdgs.jpg
 
-            $b Back to work experience
+            $b Go back
             $cmd work
+            $cmd home
             `
         ))
     },
@@ -172,8 +174,9 @@ const commands = {
 
             $img room_acoustics.jpg
 
-            $b Back to work experience
+            $b Go back
             $cmd work
+            $cmd home
             `
         ))
     },
@@ -188,8 +191,9 @@ const commands = {
             $lnk https://hyp-ed.com/
             $img hyped.jpg
 
-            $b Back to work experience
+            $b Go back
             $cmd work
+            $cmd home
             `
         ))
     },
@@ -201,8 +205,9 @@ const commands = {
 
             Created a model of queue times at my school's parents' evening using some existing available data. The model showed how sensitive the queuing time is to inefficiencies in between meetings, and the school took measures to combat this in subsequent years.
 
-            $b Back to work experience
+            $b Go back
             $cmd work
+            $cmd home
             `
         ))
     },
@@ -247,8 +252,8 @@ const commands = {
             Chat web app with encryption.
             $cmd chat
 
-            $b Back to profile
-            $cmd profile
+            $b Back to home
+            $cmd home
         `))
     },
 
@@ -264,8 +269,9 @@ const commands = {
             $b Related:
             $cmd noxivecom
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -282,8 +288,9 @@ const commands = {
             $b Related:
             $cmd noxive
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -297,8 +304,9 @@ const commands = {
 
             $img second_wind.jpg
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -312,8 +320,9 @@ const commands = {
             $lnk https://felixxwu-xo.herokuapp.com/
             $img naughts_and_crosses.jpg
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -330,8 +339,9 @@ const commands = {
             $b Related:
             $cmd owme
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -348,8 +358,9 @@ const commands = {
             $b Related:
             $cmd flatapp
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -366,8 +377,9 @@ const commands = {
             $b Related:
             $cmd chordgenerator
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -384,8 +396,9 @@ const commands = {
             $b Related:
             $cmd housegenerator
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -399,8 +412,9 @@ const commands = {
             $lnk https://github.com/felixxwu/Sudoku
             $img sudoku.jpg
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -414,8 +428,9 @@ const commands = {
             $lnk https://play.google.com/store/apps/details?id=wu.felix.alarmtimer
             $img android_alarm.jpg
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -430,8 +445,9 @@ const commands = {
 
             $lnk https://github.com/felixxwu/CreatED-Ultrasound
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -445,8 +461,9 @@ const commands = {
             $lnk https://chat-secure.herokuapp.com/
             $img encrypted_chat.jpg
 
-            $b Back to personal projects
+            $b Go back
             $cmd projects
+            $cmd home
             `
         ))
     },
@@ -484,8 +501,8 @@ const commands = {
             Individual results and topic details can be found on my LinkedIn.
             $lnk https://www.linkedin.com/in/felixxwu/
 
-            $b Back to profile:
-            $cmd profile
+            $b Back to home:
+            $cmd home
         `))
     },
 
@@ -521,8 +538,8 @@ const commands = {
             Matlab,
             MIPS Assembly
 
-            $b Back to profile:
-            $cmd profile
+            $b Back to home:
+            $cmd home
         `))
     },
 
@@ -545,7 +562,7 @@ const commands = {
                 true,
                 () => {
                     commands.clear();
-                    commands.profile();
+                    commands.home();
                 }
             )
         );
