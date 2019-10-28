@@ -81,6 +81,9 @@ const commands = {
             $b Email:
             felixxwu@gmail.com
 
+            $b CV:
+            $lnk /Felix%20Wu%20-%20CV.pdf
+
             $b GitHub:
             $lnk https://github.com/felixxwu
 
@@ -531,6 +534,7 @@ const commands = {
                     new LineClass("Version " + store.state.version),
                     new LineClass("Loading components..."),
                     new LineClass("Loading image files..."),
+                    new LineClass("Loading movie scripts..."),
                     new LineClass("Loading pages..."),
                     new LineClass("Loading profile..."),
                     new LineClass(""),
