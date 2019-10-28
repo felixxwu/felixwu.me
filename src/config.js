@@ -1,5 +1,5 @@
 export default {
-    slowBlockDelay: 300,
+    slowBlockDelay: 250,
     fastBlockDelay: 20,
     maxLinesUntilNoFocus: 50,
     expectedLineWidth: 80,
@@ -22,5 +22,5 @@ export default {
     focusDelay: 300,
     secondBlue: "#006989",
 
-    version: "1.17"
+    version: "1.18"
 }

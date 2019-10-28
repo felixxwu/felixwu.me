@@ -102,8 +102,7 @@ const commands = {
             $b Technical skills and languages:
             $cmd skills
 
-            Type "help" or "?" for a list of available commands.`,
-            true
+            Type "help" or "?" for a list of available commands.`
         ));
     },
 
@@ -472,34 +471,40 @@ const commands = {
         store.dispatch("pushBlock", parse(`
             $h1 UNIVERSITY COURSES
 
-            $b COURSES COMPLETED AT EDINBURGH:
+            $b Year 4 (50% of degree) - TBC
+            Software Design and Modelling,
+            Music Informatics,
+            Machine Learning Practical,
+            Honours Project (Machine Learning),
+            Data Mining and Exploration,
+            Compiling Techniques
 
+            $b Year 3 (50% of degree) - Average: First
             Software Testing,
             Computer Security,
             Professional Issues,
             Introductory Applied Machine Learning,
             Large Practical (Android App),
             Operating Systems,
-            System Design Project (Robotics Team Project),
+            System Design Project (Robotics Team Project)
+
+            $b Year 2 - Average: 2.1
             Probability with Applications,
             Discrete Mathematics and Mathematical Resoning,
             Introduction to Software Engineering,
             Introduction to Computer Systems,
             Reasoning and Agents,
             Algorithms, Data Structures & Learning,
-            Processing Formal and Natural Languages,
+            Processing Formal and Natural Languages
+
+            $b Year 1 - Average: 2.1
             Calculus and its Applications,
             Introduction to Linear Algebra,
             Cognitive Science,
             Data and Analysis,
             Object-Oriented Programming
             Functional Programming,
-            Computation and Logic,
-
-            $b Average grade: 72%
-
-            Individual results and topic details can be found on my LinkedIn.
-            $lnk https://www.linkedin.com/in/felixxwu/
+            Computation and Logic
 
             $b Back to home:
             $cmd home
@@ -513,29 +518,26 @@ const commands = {
             $b SPOKEN LANGUAGES:
             English: fluent,
             German: fluent,
-            Cantonese: conversational
+            Cantonese: novice
 
             $b MOST COMPETENT IN:
-            Javascript,
-            Vue.js,
+            Javascript (+ Vue, React, Node),
             Java,
             Python,
-            React.js,
-            Node.js,
-            PHP,
             HTML / CSS,
+            PHP,
             SQL,
-            Android (Java/Kotlin),
+            Android (Java / Kotlin),
             Object Oriented Programming,
-            Unit Testing
-
-            $b OTHER SKILLS:
+            Software Testing,
+            Algorithmic Analysis
+            
+            $b LIMITED EXPERIENCE WITH:
             Machine Learning,
-            Algorithmic Analysis,
+            Matlab,
             Haskell,
             C,
             C#,
-            Matlab,
             MIPS Assembly
 
             $b Back to home:
@@ -577,7 +579,7 @@ const commands = {
     },
 
     about: () => {
-        store.dispatch("pushBlock", parse("Website created with VueJS (2019). Version " + store.state.version))
+        store.dispatch("pushBlock", parse("Website created with VueJS (2019). Version " + store.state.version, true))
     },
 
     gnomed: () => {
@@ -587,7 +589,7 @@ const commands = {
     },
 
     jazz: () => {
-        store.dispatch("pushBlock", parse(script));
+        store.dispatch("pushBlock", parse(script, true));
     }
 };
 

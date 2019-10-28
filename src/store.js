@@ -51,7 +51,7 @@ export default new Vuex.Store({
         }
         this.commit("push", currentLine);
 
-        if (screen.width > 600) {
+        if (screen.width > 600 || block.focusAll) {
           focus();
         }
         // if (progress < config.maxLinesUntilNoFocus || block.focusAll) {
