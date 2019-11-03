@@ -140,7 +140,7 @@ const commands = {
             (2019)
 
             A 3-month long internship for the School of Engineering at the University of Edinburgh, in which I worked with the IT Team to build the foundations of the new user interface for various database management related internal applications. The component that I was in charge of would be capable of making complex queries, displaying results in a modular and configurable way, and editing field values and relationships robustly and intuitively, amongst other things.
-            The main challenge was to create this component to be highly configurable for a wide variety of applications including a staff and student account and relationship management system, a desk allocation system, and a software license tracking system. These applications were to be developed by other teams at the School of Engineering and so I was working closely with them to fulfil the requirements.
+            The main challenge was to create this component to be highly configurable for a wide variety of applications including a staff and student account and relationship management system, a desk allocation system, and a software license tracking system. These applications were to be developed by other teams at the School of Engineering and so I was working closely with them to fulfill the requirements.
             The technology stack for these projects is:
             • Pyramid-Python backend with the pyramid-jsonapi library
             • PostgreSQL database
@@ -364,8 +364,8 @@ const commands = {
         store.dispatch("pushBlock", parse(
             `$h1 SECOND WIND
 
-            Second Wind is a multiplayer real time strategy game (work in progress) in which you control a floating island in search for resources on the map. Resources are finite and so you must compete against other players by engaging in a chess-style turn based battle. The resources you win can be used to upgrade your island and create units for the army you use in battles. Each unit has unique abilities and so choosing the right ones to devlop play styles and strategies is crucial to winning a battle.
-            This project is an ambitious team collaboration with a university friend spanning several years, that we are unfortunately struggling to find time to complete. However, working with a partner on such a big project has allowed me to develop my communication, code readability and long term project management like no other coding project has, as well as other technical skills like UI and UX design, optimasations in server-client communication, and preserving code maintainability across a large and long term project.
+            Second Wind is a multiplayer real time strategy game (work in progress) in which you control a floating island in search for resources on the map. Resources are finite and so you must compete against other players by engaging in a chess-style turn based battle. The resources you win can be used to upgrade your island and create units for the army you use in battles. Each unit has unique abilities and so choosing the right ones to develop play styles and strategies is crucial to winning a battle.
+            This project is an ambitious team collaboration with a university friend spanning several years, that we are unfortunately struggling to find time to complete. However, working with a partner on such a big project has allowed me to develop my communication, code readability and long term project management like no other coding project has, as well as other technical skills like UI and UX design, optimisations in server-client communication, and preserving code maintainability across a large and long term project.
 
             $b Links:
             $lnk https://noxive.com/secondwind
@@ -413,7 +413,7 @@ const commands = {
         store.dispatch("pushBlock", parse(
             `$h1 FLATAPP
 
-            FlatApp is a web app that allows groups of people to keep track of their debts with each other, for things like groceries and bills. It features PayPal integration, making it easy to settle up any debts, however it is possible to use FlatApp without ever using it since it automatically cancels out the debts. It also features a communal shopping list where a debt is created automatically with whoever put up the item, or, if the item is communal, splits the debt automatically between all group members.
+            FlatApp is a web app that allows groups of people to keep track of their debts with each other for things like groceries and bills. It features PayPal integration, making it easy to settle up any debts, however it is possible to use FlatApp without ever using it since it automatically cancels out the debts. It also features a communal shopping list where a debt is created automatically with whoever put up the item, or, if the item is communal, splits the debt automatically between all group members.
 
             $b Feature overview:
             • Create an account associated with a group of friends
@@ -445,7 +445,7 @@ const commands = {
         store.dispatch("pushBlock", parse(
             `$h1 OWME
             
-            Owme is the reincarnation of FlatApp, improving on the shortcomings thereof. Now with an additional Google sign-in option, you can interact with anyone on Owme, not just people in your group, and you can create any number of groups with your friends to  get a quick overview of your net debt with the group, on top of the debts with individuals. The radically improved design now allows you to easily create a debt with a friend, selection of friends, or group, in a much more intuitive way. The PayPal integration is also improved, taking advantage of the paypal.me system.
+            Owme is the reincarnation of FlatApp, improving on the shortcomings thereof. Now with an additional Google sign-in option, you can interact with anyone on Owme, not just people in your group, and you can create any number of groups with your friends to get a quick overview of your net debt with the group, on top of the debts with individuals. The radically improved design now allows you to easily create a debt with a friend, selection of friends, or group, in a much more intuitive way. The PayPal integration is also improved, taking advantage of the paypal.me system.
 
             $b Feature overview:
             • A clean and dynamic, single-page design
