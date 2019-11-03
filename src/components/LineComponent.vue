@@ -1,5 +1,5 @@
 <template>
-    <a v-if="line.type == 'command'" v-on:click="commandClick">{{cmdbefore+line.text+cmdafter}}</a>
+    <a class="cmd" v-if="line.type == 'command'" v-on:click="commandClick">{{cmdbefore+line.text+cmdafter}}</a>
     <a v-else-if="line.type == 'image'" v-on:click="imageClick">{{imgbefore+line.text+imgafter}}</a>
     <a v-else-if="line.type == 'link'" :href="line.text" target="_blank">{{lnkbefore+line.text+lnkafter}}</a>
     <h1 v-else-if="line.type == 'h1'">{{line.text}}</h1>
@@ -69,7 +69,8 @@ export default {
 input, form {
     background-color: var(--black);
     border: none;
-    font-family: 'Source Code Pro', monospace;
+    font-family: monospace;
+    /* font-family: 'Source Code Pro', monospace; */
     color: var(--white);
     font-size: var(--font-size);
     width: calc(100% - var(--font-size) * 3);
@@ -89,5 +90,9 @@ a {
 
 a:hover {
     color: var(--white);
+}
+
+.cmd {
+    font-style: italic;
 }
 </style>

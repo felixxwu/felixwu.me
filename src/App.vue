@@ -7,7 +7,7 @@
 <script>
 import cli from "./components/cli.vue";
 import store from "./store.js";
-import logic from "./static/logic.js";
+// import logic from "./static/logic.js";
 import commands from "./static/commands.js";
 import LineClass from "./classes/LineClass.js";
 import Block from "./classes/Block.js";
@@ -65,13 +65,12 @@ export default {
     peformLogic(input) {
       this.history.push(input);
       this.selectedHistory = 0;
-      store.commit("submitInput", input);
-      if (logic[input]) {
-        logic[input]();
-      } else if (commands[input]) {
+      if (commands[input]) {
         commands.clear();
+        store.commit("submitInput", input);
         commands[input]();
       } else {
+        store.commit("submitInput", input);
         commands.unrecognised(input);
       }
     }
