@@ -82,7 +82,7 @@ const commands = {
             felixxwu@gmail.com
 
             $b CV:
-            $lnk /Felix%20Wu%20-%20CV.pdf
+            $lnk https://felixwu.me/cv
 
             $b GitHub:
             $lnk https://github.com/felixxwu
