@@ -88,7 +88,7 @@ const commands = {
             $lnk https://github.com/felixxwu
 
             $b LinkedIn:
-            $lnk https://www.linkedin.com/in/felixxwu/
+            $lnk https://linkedin.com/in/felixxwu
 
             $b Work and past experience:
             $cmd work
