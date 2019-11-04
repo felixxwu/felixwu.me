@@ -66,9 +66,11 @@ export default {
       this.history.push(input);
       this.selectedHistory = 0;
       if (commands[input]) {
-        commands.clear();
+        store.dispatch("clear");
         store.commit("submitInput", input);
-        commands[input]();
+        setTimeout(() => {
+          commands[input]();
+        }, 300);
       } else {
         store.commit("submitInput", input);
         commands.unrecognised(input);
@@ -118,7 +120,7 @@ body {
   height: 92vh;
   width: 900px;
   max-width: 100vw;
-  box-shadow: 0 0 80px var(--black);
+  box-shadow: 0 0 40px var(--black);
   overflow-y: scroll;
 }
 

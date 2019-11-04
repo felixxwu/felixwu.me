@@ -20,6 +20,8 @@
             <img v-if="image == 'android_alarm.jpg'" src="../assets/android_alarm.jpg">
             <img v-if="image == 'encrypted_chat.jpg'" src="../assets/encrypted_chat.jpg">
             <img v-if="image == 'engineering.jpg'" src="../assets/engineering.jpg">
+            <img v-if="image == 'chess_1.jpg'" src="../assets/chess_1.jpg">
+            <img v-if="image == 'chess_2.jpg'" src="../assets/chess_2.jpg">
             <div id="close" v-on:click="close"></div>
         </div>
     </div>
