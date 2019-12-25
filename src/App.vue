@@ -1,147 +1,83 @@
 <template>
-  <div id="app">
-    <cli></cli>
+  <div
+    id="app"
+    :style="config.cssVars"
+  >
+    <Header id="header"></Header>
+
+    <Category
+      v-for="(category, index) in this.categories" :key="index"
+      :catNo="index"
+      :category="category"
+    ></Category>
   </div>
 </template>
 
 <script>
-import cli from "./components/cli.vue";
-import store from "./store.js";
-// import logic from "./static/logic.js";
-import commands from "./static/commands.js";
-import LineClass from "./classes/LineClass.js";
-import Block from "./classes/Block.js";
+import Header from './components/Header.vue'
+import Category from './components/Category'
+import config from './components/config'
+import data from './data/data'
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    cli
+    Header,
+    Category
   },
-  store,
   data() {
     return {
-      history: [],
-      selectedHistory: 0
+      config: config,
+      categories: data.categories
     }
   },
-  created() {
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowUp") {
-        if (this.selectedHistory >= this.history.length) return;
-        this.selectedHistory++;
-        const input = document.getElementById("input");
-        const value = this.history[this.history.length - this.selectedHistory];
-        value & (input.value = value);
-      }
-      if (e.key === "ArrowDown") {
-        if (this.selectedHistory <= 0) return;
-        this.selectedHistory--;
-        const input = document.getElementById("input");
-        const value = this.selectedHistory === 0 ? "" :
-          this.history[this.history.length - this.selectedHistory]
-        input.value = value;
-      }
-      if (e.key === "Tab") {
-        e.preventDefault();
-        const input = document.getElementById("input");
-        const suggestions = commands.KEYS().filter(key => key.startsWith(input.value));
-        if (suggestions.length === 1) {
-          input.value = suggestions[0];
-        }
-        if (suggestions.length > 1) {
-          const value = input.value;
-          store.commit("submitInput", value);
-          store.dispatch("pushBlock", new Block(
-            [
-              new LineClass(suggestions.join(", ")),
-              new LineClass(value, "input")
-            ]
-          ))
-        }
-      }
-    })
-  },
-  methods: {
-    peformLogic(input) {
-      this.history.push(input);
-      this.selectedHistory = 0;
-      if (commands[input]) {
-        store.dispatch("clear");
-        store.commit("submitInput", input);
-        setTimeout(() => {
-          commands[input]();
-        }, 300);
-      } else {
-        store.commit("submitInput", input);
-        commands.unrecognised(input);
-      }
-    }
-  }
-};
+}
 </script>
 
 <style>
-* {
-  --black: #222222;
-  --black-lighter: #333333;
-  --white: #dddddd;
-  --blue: #b1b1ff;
-  --font-size: 17px;
-  font-family: monospace;
-  /* font-family: 'Source Code Pro', monospace; */
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  background-color: var(--white);
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
-  display: grid;
-  grid-template-areas:
-    '. . .'
-    '. mid .'
-    '. . .';
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 1fr auto 1fr;
-}
-
 #app {
-  border-top: solid var(--black-lighter) 25px;
-  border-radius: 4px;
-  grid-area: mid;
-  background-color: var(--black);
+  /* background-color: rgb(29, 29, 34); */
+  animation: bg var(--loop) infinite;
+  animation-timing-function: linear;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 300px;
+  color: var(--black);
+}
+
+@keyframes bg {
+  0%   { background-color: hsl(400,   var(--sat), var(--light)) }
+  10%  { background-color: hsl(370,   var(--sat), var(--light)) }
+  20%  { background-color: hsl(340,   var(--sat), var(--light)) }
+  30%  { background-color: hsl(310,   var(--sat), var(--light)) }
+  40%  { background-color: hsl(280,   var(--sat), var(--light)) }
+  50%  { background-color: hsl(250,   var(--sat), var(--light)) }
+  60%  { background-color: hsl(220,   var(--sat), var(--light)) }
+  70%  { background-color: hsl(190,   var(--sat), var(--light)) }
+  80%  { background-color: hsl(160,   var(--sat), var(--light)) }
+  100% { background-color: hsl(40,    var(--sat), var(--light)) }
+}
+
+#header {
+  margin-bottom: 50px;
+}
+
+.header {
+  padding: var(--titlePadding);
+  font-size: var(--headerSize);
+  font-family: 'Unica One', cursive;
+  letter-spacing: var(--letterSpacing);
+  margin-left: var(--letterSpacing);
   color: var(--white);
-  font-size: var(--font-size);
-  overflow-wrap: break-word;
-  height: 92vh;
-  width: 900px;
-  max-width: 100vw;
-  box-shadow: 0 0 40px var(--black);
-  overflow-y: scroll;
+  text-transform: uppercase;
 }
 
-h1 {
-  margin: 0;
-  font-size: 70px;
-  font-weight: 100;
-  font-family: 'Unica One', sans-serif;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-@media only screen and (max-width: 900px) {
-  #app {
-    border: none;
-    border-radius: 0;
-    grid-area: initial;
-    width: 100vw;
-    height: 100vh;
-  }
+a {
+  font-weight: bold;
+  text-decoration: none;
+  font-style: italic;
 }
 </style>
