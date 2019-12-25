@@ -60,6 +60,7 @@ export default {
   box-shadow: var(--boxShadow);
   transition: var(--openAnimTime);
   cursor: pointer;
+  width: 100%;
 }
 
 img {
@@ -72,5 +73,13 @@ img {
 .content {
   padding: var(--cardPadding);
   text-align: left;
+}
+
+/* keep the screen max-width in sync with var(--cardExpandedWidth) */
+@media only screen and (max-width: 600px) {
+  .card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 </style>

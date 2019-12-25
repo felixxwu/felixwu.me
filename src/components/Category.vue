@@ -41,17 +41,19 @@ export default {
           card.style.maxWidth = config.cssVars["--cardExpandedWidth"]
           card.style.height = config.cssVars["--cardExpandedHeight"]
           card.style.margin = "0"
+          card.style.borderRadius = "0"
           card.firstElementChild.style.height = config.cssVars["--imgExpandedHeight"]
           setTimeout(() => {
             card.scrollIntoView({
               behavior: "smooth",
               block: "center"
             });
-          }, config.cssVars.openAnimTime);
+          }, config.cssVars.scrollToTime);
         } else {
           card.style.maxWidth = config.cssVars["--cardWidth"]
           card.style.height = config.cssVars["--cardHeight"]
           card.style.margin = config.cssVars["--cardMargin"]
+          card.style.borderRadius = config.cssVars["--borderRadius"]
           card.firstElementChild.style.height = config.cssVars["--imgHeight"]
         }
       })

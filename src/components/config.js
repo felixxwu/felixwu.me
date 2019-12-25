@@ -19,18 +19,18 @@ export default {
 
     // card
     "--cardWidth": "500px",
-    "--cardExpandedWidth": "600px",
-    "--cardHeight": "235px",
-    "--cardExpandedHeight": "550px",
+    "--cardExpandedWidth": "600px", // keep in sync with @media queries
+    "--cardHeight": "240px",
+    "--cardExpandedHeight": "600px",
     "--imgHeight": "150px",
     "--imgExpandedHeight": "250px",
-    "--cardPadding": "15px",
+    "--cardPadding": "20px",
     "--cardMargin": "50px",
-    "--borderRadius": "12px",
-    "--cardTitleSize": "18px",
+    "--borderRadius": "15px",
+    "--cardTitleSize": "19px",
 
     //animation
-    openAnimTime: 250,
+    scrollToTime: 300,
     "--openAnimTime": "0.5s",
     "--imgAnimTime": "1s",
   }
