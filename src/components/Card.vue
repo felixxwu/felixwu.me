@@ -4,7 +4,6 @@
     class="card"
     :class="{scroll: this.isOpen()}"
     v-on:click="handleClick"
-    tabindex="0"
   >
     <img :src="`img/${this.data.img}`" alt="">
     <div class="content">

@@ -44,7 +44,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   padding-top: 60px;
-  padding-bottom: 300px;
+  padding-bottom: 400px;
   color: var(--black);
 }
 
@@ -66,7 +66,8 @@ export default {
 }
 
 .header {
-  padding: var(--titlePadding);
+  padding-top: var(--titlePadding);
+  padding-bottom: var(--titlePadding);
   font-size: var(--headerSize);
   font-family: 'Unica One', cursive;
   letter-spacing: var(--letterSpacing);

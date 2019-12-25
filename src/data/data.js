@@ -17,6 +17,7 @@ import sudoku from './cards/projects/sudoku'
 import alarm from './cards/projects/alarm'
 import ultrasound from './cards/projects/ultrasound'
 import chat from './cards/projects/chat'
+import console from './cards/projects/console'
 
 export default {
   bio: `Fourth year Computer Science student at The University of Edinburgh.`,
@@ -46,6 +47,7 @@ export default {
         flatapp,
         owme,
         alarm,
+        console,
         house,
         chord,
         sudoku,

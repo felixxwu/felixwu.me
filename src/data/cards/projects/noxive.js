@@ -1,5 +1,5 @@
 export default {
-  title: "Noxive (Music Production Hobby & Website)",
+  title: "Noxive: Music Production Hobby",
   img: "noxive.jpg",
   text: `
   Noxive is my alias for my electronic music production hobby. So far I have gained over 500k views across YouTube, SoundCloud and Spotify, and generated a small income of $600 from royalties and other paid work. I have had the opportunity to collaborate with many talented artists over the last few years, improving my communication and feedback skills.
