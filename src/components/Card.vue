@@ -26,7 +26,6 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log(this)
       this.openCard()
     },
     isOpen() {
@@ -53,6 +52,7 @@ export default {
 }
 
 .card {
+  position: relative;
   margin: var(--cardMargin);
   overflow-y: hidden;
   display: inline-block;
@@ -88,7 +88,6 @@ img {
 }
 
 .content {
-  position: relative;
   margin-top: var(--imgHeight);
   padding: var(--cardPadding);
   text-align: left;

@@ -31,7 +31,7 @@ export default {
 
     //animation
     scrollToTime: 300,
-    "--openAnimTime": "0.5s",
+    "--openAnimTime": "0.3s",
     "--imgAnimTime": "1s",
   }
 }

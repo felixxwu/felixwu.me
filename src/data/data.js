@@ -47,12 +47,12 @@ export default {
         flatapp,
         owme,
         alarm,
-        console,
         house,
         chord,
         sudoku,
         ultrasound,
-        chat
+        chat,
+        console,
       ]
     },
   ]
