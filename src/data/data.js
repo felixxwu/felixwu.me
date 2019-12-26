@@ -17,6 +17,7 @@ import sudoku from './cards/projects/sudoku'
 import alarm from './cards/projects/alarm'
 import ultrasound from './cards/projects/ultrasound'
 import chat from './cards/projects/chat'
+import xo from './cards/projects/xo'
 import console from './cards/projects/console'
 
 export default {
@@ -47,6 +48,7 @@ export default {
         flatapp,
         owme,
         alarm,
+        xo,
         house,
         chord,
         sudoku,

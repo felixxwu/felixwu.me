@@ -24,7 +24,7 @@ export default {
   <ul>
     <li>English: fluent</li>
     <li>German: fluent</li>
-    <li>Cantonese: novice</li>
+    <li>Cantonese: rusty</li>
   </ul>
   `
 }

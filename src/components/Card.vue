@@ -65,7 +65,7 @@ export default {
   cursor: pointer;
   width: 100%;
   text-align: left;
-  background-color: #fff;
+  background: linear-gradient(180deg, black 50%, white 50%);
 }
 
 

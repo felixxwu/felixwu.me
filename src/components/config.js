@@ -26,7 +26,7 @@ export default {
     "--imgExpandedHeight": "250px",
     "--cardPadding": "20px",
     "--cardMargin": "50px",
-    "--borderRadius": "15px",
+    "--borderRadius": "10px",
     "--cardTitleSize": "19px",
 
     //animation
