@@ -3,14 +3,12 @@
     :id="id"
     class="card"
     :class="{scroll: this.isOpen()}"
+    v-on:click="handleClick"
   >
-  <!-- card must only have two children -->
     <img :src="`img/${this.data.img}`" alt="">
-    <div class="scroller" v-on:click="handleClick">
-      <div class="content">
-        <div class="title">{{this.data.title}}</div>
-        <div v-if="this.shouldShowText()" v-html="this.data.text"></div>
-      </div>
+    <div class="content">
+      <div class="title">{{this.data.title}}</div>
+      <div v-if="this.shouldShowText()" v-html="this.data.text"></div>
     </div>
   </div>
 </template>
@@ -26,7 +24,6 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log(this)
       this.openCard()
     },
     isOpen() {
@@ -64,36 +61,18 @@ export default {
   transition: var(--openAnimTime);
   cursor: pointer;
   width: 100%;
-  text-align: left;
-  background-color: #fff;
-}
-
-
-.scroller {
-  position: relative;
-  overflow-y: auto;
-  width: 100%;
-  height: 100%;
 }
 
 img {
-  position: absolute;
+  width: 100%;
   height: var(--imgHeight);
   object-fit: cover;
   transition: var(--imgAnimTime);
-  border-radius: 10px 10px 0 0;
-  max-width: var(--cardWidth);
-  transition: var(--openAnimTime);
-  width: 100%
 }
 
 .content {
-  position: relative;
-  margin-top: var(--imgHeight);
   padding: var(--cardPadding);
   text-align: left;
-  background-color: #fff;
-  transition: var(--openAnimTime);
 }
 
 /* !! keep the screen max-width in sync with var(--cardExpandedWidth) */

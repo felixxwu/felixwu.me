@@ -15,6 +15,7 @@
 <script>
 import Card from './Card'
 import config from './config'
+import setCss from './setCss'
 
 export default {
   name: 'category',
@@ -36,27 +37,27 @@ export default {
     },
     openCard(id) {
       this.category.cards.forEach((_, cardNo) => {
+
         const card = document.getElementById(this.getID(cardNo))
+
         if (cardNo === id && cardNo !== this.openedCard) {
-          card.style.maxWidth = config.cssVars["--cardExpandedWidth"]
-          card.style.height = config.cssVars["--cardExpandedHeight"]
-          card.style.margin = "0"
-          card.style.borderRadius = "0"
-          card.firstElementChild.style.height = config.cssVars["--imgExpandedHeight"]
+          setCss.expandCard(this.getID(cardNo))
+          setCss.expandImg(this.getID(cardNo))
+
           setTimeout(() => {
             card.scrollIntoView({
               behavior: "smooth",
               block: "center"
             });
           }, config.cssVars.scrollToTime);
+
         } else {
-          card.style.maxWidth = config.cssVars["--cardWidth"]
-          card.style.height = config.cssVars["--cardHeight"]
-          card.style.margin = config.cssVars["--cardMargin"]
-          card.style.borderRadius = config.cssVars["--borderRadius"]
-          card.firstElementChild.style.height = config.cssVars["--imgHeight"]
+          setCss.closeCard(this.getID(cardNo))
+          setCss.closeImg(this.getID(cardNo))
         }
+
       })
+
       if (this.openedCard === id) {
         this.openedCard = null
       } else {
