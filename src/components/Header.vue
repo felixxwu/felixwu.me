@@ -1,7 +1,7 @@
 <template>
   <div>
     <img src="../assets/profile.jpg" class="profile" alt="Profile Picture">
-    <div class="header">FELIX WU</div>
+    <div class="header">Felix Wu</div>
     <p class="bio">
       {{this.bio}}
       <br>
@@ -41,14 +41,15 @@ export default {
 }
 
 .bio {
-  max-width: 600px;
-  margin: auto;
-  color: var(--white);
-  padding: 10px;
+  max-width: 500px;
+  /* margin: auto; */
+  color: var(--black);
+  /* padding: 10px; */
 }
 
 .link {
   width: 45px;
-  margin: 20px;
+  margin-right: 30px;
+  filter: brightness(0.25);
 }
 </style>

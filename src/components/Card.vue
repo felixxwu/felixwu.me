@@ -9,7 +9,7 @@
     <div class="scroller" v-on:click="handleClick">
       <div class="content">
         <div class="title">{{this.data.title}}</div>
-        <div v-if="this.shouldShowText()" v-html="this.data.text"></div>
+        <div class="text" v-if="this.shouldShowText()" v-html="this.data.text"></div>
       </div>
     </div>
   </div>
@@ -42,9 +42,10 @@ export default {
 
 .title {
   font-size: var(--cardTitleSize);
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   text-align: center;
-  font-weight: bold;
+  line-height: 1;
+  /* font-weight: bold; */
 }
 
 .scroll {
@@ -54,20 +55,27 @@ export default {
 .card {
   position: relative;
   margin: var(--cardMargin);
+  margin-right: calc(var(--cardMargin) * 2);
+  margin-left: 0;
   overflow-y: hidden;
   display: inline-block;
   background-color: var(--white);
   max-width: var(--cardWidth);
   height: var(--cardHeight);
   border-radius: var(--borderRadius);
-  box-shadow: var(--boxShadow);
+  border: solid 1px var(--grey);
   transition: var(--openAnimTime);
   cursor: pointer;
   width: 100%;
   text-align: left;
-  background: linear-gradient(180deg, black 50%, white 50%);
+  background-color: var(--white);
+  /* background: linear-gradient(180deg, black 50%, var(--white) 50%); */
 }
 
+.card:hover {
+  box-shadow: var(--boxShadow);
+
+}
 
 .scroller {
   position: relative;
@@ -81,8 +89,9 @@ img {
   height: var(--imgHeight);
   object-fit: cover;
   transition: var(--imgAnimTime);
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
   max-width: var(--cardWidth);
+  /* max-width: calc(var(--cardWidth) + 2px); */
   transition: var(--openAnimTime);
   width: 100%
 }
@@ -91,16 +100,21 @@ img {
   margin-top: var(--imgHeight);
   padding: var(--cardPadding);
   text-align: left;
-  background-color: #fff;
+  background-color: var(--white);
   transition: var(--openAnimTime);
+}
+
+.text {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /* !! keep the screen max-width in sync with var(--cardExpandedWidth) */
 @media only screen and (max-width: 600px) {
-  .card {
+  /* .card {
     margin-left: 0 !important;
     margin-right: 0 !important;
-  }
+  } */
 }
 </style>
 

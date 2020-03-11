@@ -6,7 +6,7 @@ export default {
         const content = card.lastElementChild.firstElementChild
         card.style.maxWidth = config.cssVars["--cardExpandedWidth"]
         card.style.height = config.cssVars["--cardExpandedHeight"]
-        card.style.margin = "0"
+        // card.style.margin = "0"
         card.style.borderRadius = "0"
         content.style.marginTop = config.cssVars["--imgExpandedHeight"]
     },
@@ -15,7 +15,7 @@ export default {
         const content = card.lastElementChild.firstElementChild
         card.style.maxWidth = config.cssVars["--cardWidth"]
         card.style.height = config.cssVars["--cardHeight"]
-        card.style.margin = config.cssVars["--cardMargin"]
+        // card.style.margin = config.cssVars["--cardMargin"]
         card.style.borderRadius = config.cssVars["--borderRadius"]
         content.style.marginTop = config.cssVars["--imgHeight"]
     },

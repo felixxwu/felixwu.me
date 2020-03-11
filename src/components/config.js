@@ -2,36 +2,38 @@ export default {
   cssVars: {
 
     // general
-    "--black": "#222",
-    "--white": "#f6f6f6",
-    "--boxShadow": "0 3px 15px 0 rgba(0, 0, 0, 1)",
+    "--black": "hsl(0, 0%, 25%)",
+    "--grey": "hsl(0, 0%, 75%)",
+    "--white": "hsl(0, 0%, 97%)",
+    "--boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.3)",
+    "--fontSize": "18px",
     
     // bg colour
-    "--light": "10%",
-    "--sat": "30%",
+    "--light": "97%",
+    "--sat": "0%",
     "--loop": "25s",
 
     // header
-    "--headerSize": "30px",
+    "--headerSize": "2.7rem",
     "--profileWidth": "150px",
     "--titlePadding": "40px",
-    "--letterSpacing": "15px",
+    "--letterSpacing": "2",
 
     // card
-    "--cardWidth": "500px",
+    "--cardWidth": "400px",
     "--cardExpandedWidth": "600px", // keep in sync with @media queries
-    "--cardHeight": "240px",
+    "--cardHeight": "270px",
     "--cardExpandedHeight": "600px",
-    "--imgHeight": "150px",
+    "--imgHeight": "180px",
     "--imgExpandedHeight": "250px",
     "--cardPadding": "20px",
-    "--cardMargin": "50px",
-    "--borderRadius": "10px",
-    "--cardTitleSize": "19px",
+    "--cardMargin": "20px",
+    "--borderRadius": "7px",
+    "--cardTitleSize": "23px",
 
     //animation
-    scrollToTime: 300,
-    "--openAnimTime": "0.3s",
+    scrollToTime: 200,
+    "--openAnimTime": "0.2s",
     "--imgAnimTime": "1s",
   }
 }
