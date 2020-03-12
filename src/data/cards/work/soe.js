@@ -1,6 +1,6 @@
 export default {
   title: "School of Engineering Internship",
-  img: "soe.jpg",
+  img: "soe.png",
   text: `
   A 3-month long internship for the School of Engineering at the University of Edinburgh, in which I worked with the IT Team to build the foundations of the new user interface for various database management related internal applications. The component that I was in charge of would be capable of making complex queries, displaying results in a modular and configurable way, and editing field values and relationships robustly and intuitively, amongst other things.
   <br>

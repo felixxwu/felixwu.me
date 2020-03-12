@@ -1,6 +1,6 @@
 export default {
   title: "Room Acoustics Simulation",
-  img: "acoustics.jpg",
+  img: "acoustics.png",
   text: `
   4-week long STEM placement for The University of Oxford IT Services to use a novel agent-based programming language called "NetLogo" to complete a concept simulation for standing waves in a variable 2D environment.
   <br>

@@ -1,6 +1,6 @@
 export default {
   title: "TrapIt Website Design",
-  img: "trapit.jpg",
+  img: "trapit.png",
   text: `
   Successfully developed and delivered a blog-like page for the owner of the electronic music YouTube/SoundCloud promotion channel "TrapIt", with editor-exclusive interface for the creation and alteration of posts. Applied requirement analysis knowledge from the Software Engineering course at Edinburgh to undertake stakeholder interviews, meetings, requirements specification and use-case documents.
   <br>

@@ -1,6 +1,6 @@
 export default {
   title: "University of Edinburgh",
-  img: "uoe.jpg",
+  img: "uoe.png",
   text: `
   Year 4 (50% of degree) - TBC
   <ul>

@@ -1,6 +1,6 @@
 export default {
   title: "Encryption-secure Chat",
-  img: "chat.jpg",
+  img: "chat.png",
   text: `
   This was an excercise to test and advance my knowledge of web security and encryption, and was also a good opportunity to learn how to use websockets. It is a secure and anonymous one-to-one chat with self-deleting messages. The messages are encrypted using a symmetric AES cipher.
 

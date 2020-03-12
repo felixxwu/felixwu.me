@@ -50,6 +50,6 @@ export default {
 .link {
   width: 45px;
   margin-right: 30px;
-  filter: brightness(0.25);
+  filter: brightness(0.2);
 }
 </style>

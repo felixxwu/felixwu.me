@@ -5,7 +5,7 @@ export default {
     "--black": "hsl(0, 0%, 25%)",
     "--grey": "hsl(0, 0%, 75%)",
     "--white": "hsl(0, 0%, 97%)",
-    "--boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.3)",
+    "--boxShadow": "0 0 50px 0 rgba(0, 0, 0, 0.2)",
     "--fontSize": "18px",
     
     // bg colour
@@ -28,7 +28,7 @@ export default {
     "--imgExpandedHeight": "250px",
     "--cardPadding": "20px",
     "--cardMargin": "20px",
-    "--borderRadius": "7px",
+    "--borderRadius": "10px",
     "--cardTitleSize": "23px",
 
     //animation

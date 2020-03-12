@@ -1,6 +1,6 @@
 export default {
   title: "Random Chord Generator",
-  img: "chord.jpg",
+  img: "chord.png",
   text: `
   A C# Windows app that lets you explore and combine randomly generated chords, good for endless musical inspiration. Unlike the house music generator, these chords are completely random, allowing weird and interesting chords to inspire the user. Chords can be played at the click of a button and a MIDI sequence can be exported to use in any music program. When a chord needs to be played, the app reads from wav files (each a single piano note sound) to combine into a single wav file to play to the user, when the user is happy with the chord sequence, they can export it to a MIDI file.
 

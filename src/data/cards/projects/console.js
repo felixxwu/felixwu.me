@@ -1,6 +1,6 @@
 export default {
   title: "Old Personal Website",
-  img: "console.jpg",
+  img: "console.png",
   text: `
   The previous version of this website, which has a window and a command line interface. Commands can be typed in to navigate the same information you see here, but it is also designed to be navigable without typing for easy of use and mobile users.
   <br>

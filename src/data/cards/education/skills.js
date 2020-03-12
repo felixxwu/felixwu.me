@@ -1,6 +1,6 @@
 export default {
   title: "Technical Skills & Languages",
-  img: "skills.jpg",
+  img: "skills.png",
   text: `
   Most competent in:
   <ul>
