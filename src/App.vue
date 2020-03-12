@@ -48,7 +48,7 @@ export default {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
+  text-align: center;
   /* max-width: 1000px; */
   /* padding: 0px; */
   padding-top: 60px;
@@ -59,11 +59,13 @@ export default {
 
 .center {
   max-width: 1100px;
-  text-align: left;
+  /* text-align: left; */
   margin: auto;
 }
 
 #header {
+  /* margin: auto; */
+  text-align: center;
   margin-bottom: 50px;
   padding: var(--cardMargin);
 }
@@ -92,7 +94,7 @@ a {
 
 @media only screen and (max-width: 600px) {
   * {
-    /* --cardMargin: 15px; */
+    --cardMargin: 0;
   }
 }
 </style>

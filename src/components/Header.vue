@@ -42,14 +42,14 @@ export default {
 
 .bio {
   max-width: 500px;
-  /* margin: auto; */
+  margin: auto;
   color: var(--black);
   /* padding: 10px; */
 }
 
 .link {
   width: 45px;
-  margin-right: 30px;
+  margin: 15px;
   filter: brightness(0.2);
 }
 </style>

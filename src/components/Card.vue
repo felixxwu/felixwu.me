@@ -55,8 +55,9 @@ export default {
 .card {
   position: relative;
   margin: var(--cardMargin);
-  margin-right: calc(var(--cardMargin) * 2);
-  margin-left: 0;
+  margin-bottom: 30px;
+  /* margin-right: calc(var(--cardMargin) * 2); */
+  /* margin-left: 0; */
   overflow-y: hidden;
   display: inline-block;
   background-color: var(--white);
@@ -107,14 +108,6 @@ img {
 .text {
   padding-top: 40px;
   padding-bottom: 40px;
-}
-
-/* !! keep the screen max-width in sync with var(--cardExpandedWidth) */
-@media only screen and (max-width: 600px) {
-  /* .card {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  } */
 }
 </style>
 
