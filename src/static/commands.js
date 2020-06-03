@@ -12,18 +12,12 @@ import trapit from './employment/trapit'
 import vdgs from './employment/vdgs'
 
 // projects
-import alarm from './projects/alarm'
 import chat from './projects/chat'
 import chessrobot from './projects/chessrobot'
-import flatapp from './projects/flatapp'
 import housegenerator from './projects/housegenerator'
-import naughtsandcrosses from './projects/naughtsandcrosses'
 import noxive from './projects/noxive'
 import owme from './projects/owme'
 import projects from './projects/projects'
-import secondwind from './projects/secondwind'
-import sudoku from './projects/sudoku'
-import ultrasound from './projects/ultrasound'
 
 const commands = {
     KEYS: function() {
@@ -129,8 +123,7 @@ const commands = {
     acoustics, employment, engineering, trapit, vdgs,
 
     // projects
-    alarm, chat, chessrobot, flatapp, housegenerator, naughtsandcrosses,
-    noxive, owme, projects, secondwind, sudoku, ultrasound, 
+    chat, chessrobot, housegenerator, noxive, owme, projects, 
 
     education: () => {
         store.dispatch("pushBlock", parse(
@@ -252,12 +245,15 @@ const commands = {
 
     about: () => {
         store.dispatch("pushBlock", parse(
-            `Website created with VueJS (2019).
+            `
+            $hr
+            Website created with VueJS (2019).
 
             $b GitHub:
             $lnk https://github.com/felixxwu/felixwu.me
 
             Tip: the command input supports tab-completion and history!
+            $hr
             `
         ))
     },
