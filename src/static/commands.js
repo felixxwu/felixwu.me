@@ -69,25 +69,6 @@ const commands = {
         }
     },
 
-    // theme: () => {
-    //     const white = window.getComputedStyle(document.body).getPropertyValue("--white");
-    //     const black = window.getComputedStyle(document.body).getPropertyValue("--black");
-    //     const blue = window.getComputedStyle(document.body).getPropertyValue("--blue");
-    //     document.body.style.setProperty("--white", black);
-    //     document.body.style.setProperty("--black", white);
-    //     document.body.style.setProperty("--blue", config.secondBlue);
-    //     config.secondBlue = blue;
-
-    //     store.dispatch("pushBlock", new Block([new LineClass("", "input")]));
-    // },
-
-    // ██████╗██████╗██╗╸╸╸╸██╗██╗╸╸██╗╸╸╸██╗╸╸╸╸██╗██╗╸╸██╗
-    // ██╔═══╝██╔═══╝██║╸╸╸╸██║╚██╗██╔╝╸╸╸██║╸╸╸╸██║██║╸╸██║
-    // █████╗╸████╗╸╸██║╸╸╸╸██║╸╚███╔╝╸╸╸╸██║╸█╗╸██║██║╸╸██║
-    // ██╔══╝╸██╔═╝╸╸██║╸╸╸╸██║╸██╔██╗╸╸╸╸██║███╗██║██║╸╸██║
-    // ██║╸╸╸╸██████╗██████╗██║██╔╝╸██╗╸╸╸╚███╔███╔╝╚█████╔╝
-    // ╚═╝╸╸╸╸╚═════╝╚═════╝╚═╝╚═╝╸╸╚═╝╸╸╸╸╚══╝╚══╝╸╸╚════╝
-
     home: () => {
         store.dispatch("pushBlock", parse(
             `
@@ -101,16 +82,16 @@ const commands = {
 
             $hr
             
-            $b EMAIL:
+            $b Email:
             felixxwu@gmail.com
 
             $b CV:
             $lnk https://felixwu.me/cv
 
-            $b GITHUB:
+            $b GitHub:
             $lnk https://github.com/felixxwu
 
-            $b LINKEDIN:
+            $b LinkedIn:
             $lnk https://linkedin.com/in/felixxwu
 
 
