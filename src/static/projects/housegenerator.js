@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 HOUSE MUSIC GENERATOR
+        `
+        $h1 HOUSE MU>SIC GEN>ER>A>TOR
+
+        $cmd projects
+        $cmd home
+
+        $hr
 
         A C# Windows app that can randomly generate 16 bars of "House" music, complete with drums, main melody and a chord sequence. The app works by reading from a library of wav files (samples of drums or instrument notes), and combining them into a new wav file. By using a bit of music theory, the chord sequence that is generated is guaranteed to sound musical, and is taken into account when the melody is created so that there are no musical clashes. Various displays show the created melody and chord sequence, and when the user is happy with their creation, it can be exported to .wav or .midi files. Creating .wav and .midi files from scratch requires an understanding of their file structures and headers, which was challenging.
 
@@ -24,10 +30,7 @@ export default () => {
 
         $b Related:
         $cmd chordgenerator
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

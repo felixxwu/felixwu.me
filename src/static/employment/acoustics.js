@@ -3,12 +3,14 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$b Back to:
+        `
+        $h1 ACOUS>TICS SIM>U>LA>TION
+        (Placement, 2015)
+        
         $cmd employment
         $cmd home
         
-        $h1 ROOM ACOUSTICS SIMULATION
-        (Placement, 2015)
+        $hr
 
         4-week long STEM placement for The University of Oxford IT Services to use a novel agent-based programming language called "NetLogo" to complete a concept simulation for standing waves in a variable 2D environment.
 
@@ -17,7 +19,7 @@ export default () => {
 
         $b Images:
         $img room_acoustics.jpg
-
-        `
+        `,
+        {clear: true}
     ))
 }

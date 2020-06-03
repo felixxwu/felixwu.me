@@ -3,48 +3,31 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 PERSONAL PROJECTS
+        `
+        $h1 PER>SON>AL PRO>JECTS
 
-        Noxive: my electronic music production hobby, since 2014.
+        $cmd home
+
+        $hr
+
+        Noxive - My electronic music production hobby since 2014, with a website to browse and preview my discography. [Vue, Firebase]
         $cmd noxive
 
-        Noxive.com: the official website for Noxive.
-        $cmd noxiveweb
+        Chess Robot Group Project (2019) - Lead a software team of 5 to develop a robot capable of playing chess on a physical board. Our team won second place out of 22 groups. [Python, PyTorch]
+        $cmd chessrobot
 
-        FlatApp: a debt manager for friends and family.
-        $cmd flatapp
-
-        Owme: an improved version of FlatApp, with a new deisgn and more features.
+        Owme - A web app to help track the debts within groups of friends, with PayPal integration. [Javascript, PHP]
         $cmd owme
 
-        Second Wind: a real-time online multiplayer strategy game.
-        $cmd secondwind
-
-        Music generator complete with drums, chords and melody.
+        House Music Generator - A windows app capable of generating a section of music complete with drums, melodies, and chords. [C#]
         $cmd housegenerator
-
-        Chord generator capable of generating more complex chords.
-        $cmd chordgenerator
-
-        Android alarm interface app.
-        $cmd alarm
-
-        Communicating data over ultrasound.
-        $cmd ultrasound
 
         Web messenger app with strong encryption.
         $cmd chat
 
-        Naughts and crosses multiplayer web app.
-        $cmd naughtsandcrosses
-
-        Sudoku solver and creator.
-        $cmd sudoku
-
         This website!
         $cmd about
-
-        $b Back to home
-        $cmd home
-    `))
+        `,
+        {clear: true}
+    ))
 }

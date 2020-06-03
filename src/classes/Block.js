@@ -1,15 +1,16 @@
 export default class Block {
-    constructor(
-        lines, 
-        isLong = false, 
-        callback = () => {},
-        progress = 0,
-        focusAll = false,
+    constructor(args
+        // lines, 
+        // isLong = false, 
+        // callback = () => {},
+        // progress = 0,
+        // clear = false,
     ) {
-        this.lines = lines;
-        this.isLong = isLong;
-        this.callback = callback;
-        this.progress = progress;
-        this.focusAll = focusAll;
+
+        this.lines = args.lines;
+        this.isLong = args.isLong ? args.isLong : false;
+        this.callback = args.callback ? args.callback : () => {};
+        this.progress = args.progress ? args.progress : 0;
+        this.clear = args.clear ? args.clear : false;
     }
 }

@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 ENCRYPTION-SECURE CHAT
+        `
+        $h1 EN>CRYP>TION-SE>CURE CHAT
+
+        $cmd projects
+        $cmd home
+
+        $hr
 
         This was an excercise to test and advance my knowledge of web security and encryption, and was also a good opportunity to learn how to use websockets. It is a secure and anonymous one-to-one chat with self-deleting messages. The messages are encrypted using a symmetric AES cipher.
 
@@ -18,10 +24,7 @@ export default () => {
 
         $b Preview:
         $img encrypted_chat.jpg
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

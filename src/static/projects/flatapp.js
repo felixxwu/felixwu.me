@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 FLATAPP
+        `
+        $h1 FLAT>APP
+
+        $cmd projects
+        $cmd home
+
+        $hr
 
         FlatApp is a web app that allows groups of people to keep track of their debts with each other for things like groceries and bills. It features PayPal integration, making it easy to settle up any debts, however it is possible to use FlatApp without ever using it since it automatically cancels out the debts. It also features a communal shopping list where a debt is created automatically with whoever put up the item, or, if the item is communal, splits the debt automatically between all group members.
 
@@ -25,10 +31,7 @@ export default () => {
 
         $b Related:
         $cmd owme
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

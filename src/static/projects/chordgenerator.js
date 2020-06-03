@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 CHORD GENERATOR
+        `
+        $h1 CHORD GEN>ER>A>TOR
+
+        $cmd projects
+        $cmd home
+
+        $hr
         
         A C# Windows app that lets you explore and combine randomly generated chords, good for endless musical inspiration. Unlike the house music generator, these chords are completely random, allowing weird and interesting chords to inspire the user. Chords can be played at the click of a button and a MIDI sequence can be exported to use in any music program. When a chord needs to be played, the app reads from wav files (each a single piano note sound) to combine into a single wav file to play to the user, when the user is happy with the chord sequence, they can export it to a MIDI file.
 
@@ -24,10 +30,7 @@ export default () => {
 
         $b Related:
         $cmd housegenerator
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

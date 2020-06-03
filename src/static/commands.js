@@ -8,20 +8,17 @@ import script from "./script.js";
 import acoustics from './employment/acoustics'
 import employment from './employment/employment'
 import engineering from './employment/engineering'
-import hyperloop from './employment/hyperloop'
 import trapit from './employment/trapit'
 import vdgs from './employment/vdgs'
 
 // projects
 import alarm from './projects/alarm'
 import chat from './projects/chat'
-import chess from './projects/chess'
-import chordgenerator from './projects/chordgenerator'
+import chessrobot from './projects/chessrobot'
 import flatapp from './projects/flatapp'
 import housegenerator from './projects/housegenerator'
 import naughtsandcrosses from './projects/naughtsandcrosses'
 import noxive from './projects/noxive'
-import noxiveweb from './projects/noxiveweb'
 import owme from './projects/owme'
 import projects from './projects/projects'
 import secondwind from './projects/secondwind'
@@ -40,15 +37,16 @@ const commands = {
     },
     help: function() {
         const keys = this.KEYS();
-        const block = new Block(
-            [new LineClass("Availabe commands are:")]
+        const block = new Block({
+            lines: [new LineClass("Availabe commands are:")]
                 .concat(
                     keys.map(key => {
                         return new LineClass(key, "command");
                     })
                 )
-                .concat(new LineClass("", "input"))
-        );
+                .concat(new LineClass("", "input")),
+            clear: true
+        });
 
         store.dispatch("pushBlock", block);
     },
@@ -63,14 +61,16 @@ const commands = {
         const commands = didyoumean.map(command => "$cmd " + command + "\n");
         if (commands.length === 0) {
             store.dispatch("pushBlock", parse(
-                `"${command}" is an unrecognised command. Type "help" or "?" for a list of commands.`
+                `"${command}" is an unrecognised command. Type "help" or "?" for a list of commands.`,
+                true
             ))
         } else {
 
             store.dispatch("pushBlock", parse(
                 `"${command}" is an unrecognised command. Did you mean:
                 ${commands.join('')}
-                Type "help" or "?" for a list of commands.`
+                Type "help" or "?" for a list of commands.`,
+                true
             ));
         }
     },
@@ -96,49 +96,55 @@ const commands = {
 
     home: () => {
         store.dispatch("pushBlock", parse(
-            `$h1 FELIX WU
-            Fourth year Computer Science student at The University of Edinburgh.
+            `
+            $h1 FELIX WU
+            Computer Science graduate from The University of Edinburgh.
 
-            $b Email:
+            $cmd employment
+            $cmd projects
+            $cmd education
+            $cmd skills
+
+            $hr
+            
+            $b EMAIL:
             felixxwu@gmail.com
 
             $b CV:
             $lnk https://felixwu.me/cv
 
-            $b GitHub:
+            $b GITHUB:
             $lnk https://github.com/felixxwu
 
-            $b LinkedIn:
+            $b LINKEDIN:
             $lnk https://linkedin.com/in/felixxwu
 
-            $b EMPLOYMENT:
-            $cmd employment
 
-            $b Personal projects and hobbies:
-            $cmd projects
-
-            $b University courses at Edinburgh:
-            $cmd courses
-
-            $b Technical skills and languages:
-            $cmd skills
-
-            Type "help" or "?" for a list of available commands.`
+            Type "help" or "?" for a list of available commands.`,
+            {clear: true}
         ));
     },
 
     // employment
-    acoustics, employment, engineering, hyperloop, trapit, vdgs,
+    acoustics, employment, engineering, trapit, vdgs,
 
     // projects
-    alarm, chat, chess, chordgenerator, flatapp, housegenerator, naughtsandcrosses,
-    noxive, noxiveweb, owme, projects, secondwind, sudoku, ultrasound, 
+    alarm, chat, chessrobot, flatapp, housegenerator, naughtsandcrosses,
+    noxive, owme, projects, secondwind, sudoku, ultrasound, 
 
-    courses: () => {
+    education: () => {
         store.dispatch("pushBlock", parse(
-            `$h1 UNIVERSITY COURSES
+            `
+        $h1 UNI>VER>SI>TY OF ED>IN>BURGH
+            First in Computer Science Bachelor's with Honours
 
-            $b Year 4 (50% of degree) - TBC
+            $cmd home
+
+            $hr
+
+            $b COURSES
+
+            $b Year 4 - Average: First
             Software Design and Modelling,
             Music Informatics,
             Machine Learning Practical,
@@ -146,7 +152,7 @@ const commands = {
             Data Mining and Exploration,
             Compiling Techniques
 
-            $b Year 3 (50% of degree) - Average: First
+            $b Year 3 - Average: First
             Software Testing,
             Computer Security,
             Professional Issues,
@@ -175,63 +181,61 @@ const commands = {
 
             $b Detailed description of all courses:
             $lnk http://www.drps.ed.ac.uk/19-20/dpt/utcmpsi.htm
-
-            $b Back to home:
-            $cmd home
-        `))
+            `,
+            {clear: true}
+        ))
     },
 
     skills: () => {
         store.dispatch("pushBlock", parse(
-            `$h1 TECHNICAL SKILLS
+            `
+        $h1 TECH>NI>CAL SKILLS
+
+            $cmd home
+
+            $hr
 
             $b SPOKEN LANGUAGES:
-            English: fluent,
-            German: fluent,
-            Cantonese: novice
+            English: fluent
+            German: fluent
+            Cantonese: conversant
 
             $b MOST COMPETENT IN:
-            Javascript (+ Vue, React, Node),
-            Java,
-            Python,
-            HTML / CSS,
-            SQL,
-            Android (Java / Kotlin),
-            PHP,
-            Object Oriented Programming,
-            Software Testing,
-            Algorithmic Analysis
+            Javascript (+ Vue, React, Node)
+            Python
+            Android (Java / Kotlin)
+            Unity (C#)
+            Machine Learning (PyTorch)
             
             $b LIMITED EXPERIENCE WITH:
-            Machine Learning,
-            Matlab,
-            Haskell,
-            C,
-            C#,
-            MIPS Assembly
-
-            $b Back to home:
-            $cmd home
-        `))
+            Matlab
+            Haskell
+            PHP
+            C
+            `,
+            {clear: true}
+        ))
     },
 
     reboot: () => {
         store.dispatch("pushBlock",
-            new Block(
-                [
+            new Block({
+                lines: [
                     new LineClass("Starting OS...", "bold"),
                     new LineClass("Version " + store.state.version),
                     new LineClass("Loading components..."),
                     new LineClass("Loading image files..."),
                     new LineClass("Loading profile..."),
-                    new LineClass(""),
                 ],
-                true,
-                () => {
-                    commands.clear();
-                    commands.home();
-                }
-            )
+                isLong: true,
+                callback: () => {
+                    setTimeout(() => {
+                        commands.clear();
+                        commands.home();
+                    }, 1000);
+                },
+                clear: false
+            })
         );
     },
 
@@ -241,7 +245,9 @@ const commands = {
     },
 
     showInput: () => {
-        store.dispatch("pushBlock", new Block([new LineClass("", "input")]));
+        store.dispatch("pushBlock", new Block({
+            lines: [new LineClass("", "input")]
+        }));
     },
 
     about: () => {
@@ -251,10 +257,9 @@ const commands = {
             $b GitHub:
             $lnk https://github.com/felixxwu/felixwu.me
 
-            $b Back to home
-            $cmd home
+            Tip: the command input supports tab-completion and history!
             `
-            ))
+        ))
     },
 
     gnomed: () => {

@@ -24,6 +24,7 @@
             <img v-if="image == 'chess_2.jpg'" src="../assets/chess_2.jpg">
             <div id="close" v-on:click="close"></div>
         </div>
+        <div id="padding"></div>
     </div>
 </template>
 
@@ -54,13 +55,20 @@ export default {
 <style scoped>
 #cli {
     padding: 10px;
+    height: 100%;
 }
 
-@media only screen and (max-width: 900px) {
+#cli > #padding {
+    display: block;
+    height: 97%;
+}
+
+
+/* @media only screen and (max-width: 900px) {
   #cli {
       padding-bottom: 100px;
   }
-}
+} */
 
 #cli > div {
     min-height: 20px;

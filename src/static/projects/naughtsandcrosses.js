@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 NAUGHTS AND CROSSES WEB APP
+        `
+        $h1 NAUGHTS AND CROSS>ES WEB APP
+
+        $cmd projects
+        $cmd home
+
+        $hr
 
         A naughts and crosses game that you can play between two devices in real-time. It uses your device's location to find games nearest to you so you know which ones to connect to.
         More than anything, this project really served as a way for me to familiarise myself with React.js, Node.js and css animations. Its a proof of concept and learning experience to show that a game can be played in real-time, and a lot of the code will be repurposed for Second Wind.
@@ -21,10 +27,7 @@ export default () => {
 
         $b Related:
         $cmd secondwind
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

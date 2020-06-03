@@ -41,6 +41,11 @@ export default new Vuex.Store({
       const delayMultiplier = currentLine ? 
         currentLine.text.length / config.expectedLineWidth + 1 :
         1;
+      
+      if (block.clear && progress == 0) {
+        document.getElementById('app').scrollTop = document.getElementById('app').scrollHeight
+        // this.commit("popAll");
+      }
 
       clearTimeout(context.state.timeout)
 
@@ -55,7 +60,7 @@ export default new Vuex.Store({
         // if (screen.width > 600 || block.focusAll) {
         //   focus();
         // }
-        if (progress < config.maxLinesUntilNoFocus || block.focusAll) {
+        if (!block.clear) {
           focus();
         }
 
@@ -64,7 +69,7 @@ export default new Vuex.Store({
         this.dispatch("pushBlock", block);
       }, delay * delayMultiplier);
     },
-    clear () {
+    clear() {
       this.commit("popAll");
     }
   }

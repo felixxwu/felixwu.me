@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 SUDOKU SOLVER & CREATOR
+        `
+        $h1 SU>DOKU SOL>VER & CRE>ATOR
+
+        $cmd projects
+        $cmd home
+
+        $hr
 
         A Java app to solve or create Sudoku puzzles. N.B. the created puzzles are solvable, but they have no notion of difficulty since the creation algorithm is simple and naive and does not take into account how a real human might solve a Sudoku puzzle.
 
@@ -12,10 +18,7 @@ export default () => {
 
         $b Preview:
         $img sudoku.jpg
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

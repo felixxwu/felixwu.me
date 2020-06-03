@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 NOXIVE.COM
+        `
+        $h1 NOXIVE.COM
+
+        $cmd projects
+        $cmd home
+
+        $hr
 
         A landing page for Noxive, serving also as temporary host for other web-based projects. It features links to my social media, discography, and a built-in music player. I advertise this site anywhere I can because it has proven to serve well as an entry point for anyone looking for a particular Noxive social media account or release.
 
@@ -24,10 +30,7 @@ export default () => {
 
         $b Related:
         $cmd noxive
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

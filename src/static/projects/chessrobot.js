@@ -3,8 +3,14 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 CHESS ROBOT GROUP PROJECT
+        `
+        $h1 CHESS RO>BOT GROUP PRO>JECT
         (2019)
+
+        $cmd projects
+        $cmd home
+
+        $hr
 
         As the leader of the software team of 5, I was in charge of holding weekly meetings, discussing ideas, constructing a plan of attack, and distributing tasks and deadlines. Our robot was capable of scanning the state of any chess board, querying a chess AI for a move to play, then send instructions to a robotic arm to execute the move. We trained a machine learning classifier running on a server to recognise the positions of the pieces on the board, and used a RESTful API to talk to the Raspberry Pi to execute arm movement. My main task was to write code to interface with the robotic arm. Our robot won second place out of 22 groups.
 
@@ -24,10 +30,7 @@ export default () => {
         $b Images:
         $img chess_1.jpg
         $img chess_2.jpg
-
-        $b Go back
-        $cmd work
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

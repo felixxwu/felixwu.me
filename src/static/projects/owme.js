@@ -3,7 +3,13 @@ import store from "../../store.js";
 
 export default () => {
     store.dispatch("pushBlock", parse(
-        `$h1 OWME
+        `
+        $h1 OWME
+
+        $cmd projects
+        $cmd home
+
+        $hr
         
         Owme is the reincarnation of FlatApp, improving on the shortcomings thereof. Now with an additional Google sign-in option, you can interact with anyone on Owme, not just people in your group, and you can create any number of groups with your friends to get a quick overview of your net debt with the group, on top of the debts with individuals. The radically improved design now allows you to easily create a debt with a friend, selection of friends, or group, in a much more intuitive way. The PayPal integration is also improved, taking advantage of the paypal.me system.
 
@@ -23,10 +29,7 @@ export default () => {
 
         $b Related:
         $cmd flatapp
-
-        $b Go back
-        $cmd projects
-        $cmd home
-        `
+        `,
+        {clear: true}
     ))
 }

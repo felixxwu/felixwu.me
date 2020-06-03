@@ -1,8 +1,10 @@
 export default {
-    slowBlockDelay: 250,
+    slowBlockDelay: 350,
     fastBlockDelay: 20,
-    maxLinesUntilNoFocus: 5,
+    maxLinesUntilNoFocus: 0,
     expectedLineWidth: 80,
+    placeholderFlashInterval: 500,
+    placeholderSymbol: "_",
 
     bigFontIdentifier: "$h1 ",
     boldFontIdentifier: "$b ",
@@ -22,5 +24,8 @@ export default {
     focusDelay: 300,
     secondBlue: "#006989",
 
+    horizontalRule: "$hr",
+    softHyphen: '>',
+    
     version: "1.21"
 }
