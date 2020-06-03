@@ -31,5 +31,5 @@ export default {
     horizontalRule: "$hr",
     softHyphen: '>',
     
-    version: "1.22"
+    version: "1.23"
 }
