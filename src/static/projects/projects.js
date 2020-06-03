@@ -6,7 +6,7 @@ export default () => {
         `
         $h1 PER>SON>AL PRO>JECTS
 
-        $cmd home
+        $bcmd home
 
         $hr
 

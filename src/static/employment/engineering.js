@@ -7,8 +7,8 @@ export default () => {
         $h1 SCHOOL OF EN>GI>NNER>ING IN>TERN>SHIP
         (2019)
 
-        $cmd employment
-        $cmd home
+        $bcmd employment
+        $bcmd home
 
         $hr
 
@@ -33,10 +33,6 @@ export default () => {
         $lnk https://jsonapi.org
         $lnk https://github.com/colinhiggs/pyramid-jsonapi
         $lnk https://github.com/mrichar1/jsonapi-vuex
-
-        $b Go back
-        $cmd work
-        $cmd home
         `,
         {clear: true}
     ))

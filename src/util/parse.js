@@ -11,6 +11,9 @@ export default function parse(text, options = {clear: false}) {
         if (line.substring(0, config.commandIdentifier.length) == config.commandIdentifier) {
             return new LineClass(line.substring(config.commandIdentifier.length), "command");
         }
+        if (line.substring(0, config.backCommandIdentifier.length) == config.backCommandIdentifier) {
+            return new LineClass(line.substring(config.backCommandIdentifier.length), "bcommand");
+        }
         if (line.substring(0, config.linkIdentifier.length) == config.linkIdentifier) {
             return new LineClass(line.substring(config.linkIdentifier.length), "link");
         }

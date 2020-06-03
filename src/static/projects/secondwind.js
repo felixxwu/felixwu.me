@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 SEC>OND WIND
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
 

@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 CHORD GEN>ER>A>TOR
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
         

@@ -1,5 +1,6 @@
 <template>
     <a class="cmd" v-if="line.type == 'command'" v-on:click="commandClick">{{cmdbefore+line.text+cmdafter}}</a>
+    <a class="bcmd" v-else-if="line.type == 'bcommand'" v-on:click="commandClick">{{bcmdbefore+line.text+bcmdafter}}</a>
     <a v-else-if="line.type == 'image'" v-on:click="imageClick">{{imgbefore+line.text+imgafter}}</a>
     <a v-else-if="line.type == 'link'" :href="line.text" target="_blank">{{lnkbefore+line.text+lnkafter}}</a>
     <h1 v-else-if="line.type == 'h1'">{{line.text}}</h1>
@@ -28,6 +29,8 @@ export default {
         return {
             cmdbefore: config.commandIconBefore,
             cmdafter: config.commandIconAfter,
+            bcmdbefore: config.backCommandIconBefore,
+            bcmdafter: config.backCommandIconAfter,
             imgbefore: config.imageIconBefore,
             imgafter: config.imageIconAfter,
             lnkbefore: config.linkIconBefore,

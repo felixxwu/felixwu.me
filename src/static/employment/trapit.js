@@ -7,8 +7,8 @@ export default () => {
         $h1 TRAP>IT WEB>SITE DE>SIGN 
         (Freelance, 2018)
 
-        $cmd employment
-        $cmd home
+        $bcmd employment
+        $bcmd home
 
         $hr
 

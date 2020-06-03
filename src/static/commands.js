@@ -131,7 +131,7 @@ const commands = {
         $h1 UNI>VER>SI>TY OF ED>IN>BURGH
             First in Computer Science Bachelor's with Honours
 
-            $cmd home
+            $bcmd home
 
             $hr
 
@@ -184,7 +184,7 @@ const commands = {
             `
         $h1 TECH>NI>CAL SKILLS
 
-            $cmd home
+            $bcmd home
 
             $hr
 

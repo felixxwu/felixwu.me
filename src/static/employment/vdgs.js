@@ -7,8 +7,8 @@ export default () => {
         $h1 VDGS WEB>SITE RE>DE>SIGN
         (Freelance, 2016)
 
-        $cmd employment
-        $cmd home
+        $bcmd employment
+        $bcmd home
 
         $hr
 

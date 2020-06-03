@@ -6,7 +6,7 @@ export default () => {
         `
         $h1 EM>PLOY>MENT
 
-        $cmd home
+        $bcmd home
 
         $hr
 

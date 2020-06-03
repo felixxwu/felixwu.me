@@ -7,8 +7,8 @@ export default () => {
         $h1 CHESS RO>BOT GROUP PRO>JECT
         (2019)
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
 

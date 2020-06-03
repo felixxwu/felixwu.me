@@ -13,6 +13,10 @@ export default {
     commandIconBefore: "> ",
     commandIconAfter: "",
 
+    backCommandIdentifier: "$bcmd ",
+    backCommandIconBefore: "< ",
+    backCommandIconAfter: "",
+
     imageIdentifier: "$img ",
     imageIconBefore: "",
     imageIconAfter: " ❏",

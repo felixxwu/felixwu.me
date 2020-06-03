@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 UL>TRA>SOUND COM>MU>NI>CA>TION
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
 

@@ -7,8 +7,8 @@ export default () => {
         $h1 ACOUS>TICS SIM>U>LA>TION
         (Placement, 2015)
         
-        $cmd employment
-        $cmd home
+        $bcmd employment
+        $bcmd home
         
         $hr
 

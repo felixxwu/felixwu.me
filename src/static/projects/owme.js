@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 OWME
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
         

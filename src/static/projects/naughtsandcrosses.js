@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 NAUGHTS AND CROSS>ES WEB APP
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
 

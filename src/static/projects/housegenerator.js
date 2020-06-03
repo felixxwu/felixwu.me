@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 HOUSE MU>SIC GEN>ER>A>TOR
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
 

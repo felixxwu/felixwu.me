@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 EN>CRYP>TION-SE>CURE CHAT
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
 

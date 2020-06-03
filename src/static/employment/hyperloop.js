@@ -7,8 +7,8 @@ export default () => {
         $h1 SPACE>X HYPER>LOOP STU>DENT COM>PE>TI>TION
         (2016 / 17)
 
-        $cmd employment
-        $cmd home
+        $bcmd employment
+        $bcmd home
 
         $hr
 

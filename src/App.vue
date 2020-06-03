@@ -41,7 +41,7 @@ export default {
       this.history.push(input);
       this.selectedHistory = 0;
       if (commands[input]) {
-        // store.dispatch("clear");
+        store.dispatch("clear");
         store.commit("submitInput", input);
         setTimeout(() => {
           commands[input]();

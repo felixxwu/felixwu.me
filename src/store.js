@@ -43,7 +43,7 @@ export default new Vuex.Store({
         1;
       
       if (block.clear && progress == 0) {
-        document.getElementById('app').scrollTop = document.getElementById('app').scrollHeight
+        // document.getElementById('app').scrollTop = document.getElementById('app').scrollHeight
         // this.commit("popAll");
       }
 

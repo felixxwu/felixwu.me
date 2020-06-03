@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 AN>DROID ALARM IN>TER>FACE
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
         

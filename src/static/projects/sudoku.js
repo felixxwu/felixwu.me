@@ -6,8 +6,8 @@ export default () => {
         `
         $h1 SU>DOKU SOL>VER & CRE>ATOR
 
-        $cmd projects
-        $cmd home
+        $bcmd projects
+        $bcmd home
 
         $hr
 
