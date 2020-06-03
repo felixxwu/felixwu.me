@@ -1,4 +1,6 @@
-import config from './config'
+// functions called from js to change the actual DOM's css
+
+import config from './cssvars'
 
 export default {
     expandCard: (id) => {
@@ -9,10 +11,12 @@ export default {
         // card.style.margin = "0"
         card.style.borderRadius = "0"
         content.style.marginTop = config.cssVars["--imgExpandedHeight"]
+        card.style.display = "block"
     },
     closeCard: (id) => {
         const card = document.getElementById(id)
         const content = card.lastElementChild.firstElementChild
+        card.style.display = ""
         card.style.maxWidth = config.cssVars["--cardWidth"]
         card.style.height = config.cssVars["--cardHeight"]
         // card.style.margin = config.cssVars["--cardMargin"]

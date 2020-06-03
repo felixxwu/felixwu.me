@@ -1,3 +1,7 @@
+// config.js is used to define css variables
+// <div id="app" :style> accepts cssVars as json which turns each variable into a css variable in the DOM
+// from everywhere in the app cssvars can be accessed and will have these values
+
 export default {
   cssVars: {
 
@@ -21,19 +25,19 @@ export default {
 
     // card
     "--cardWidth": "400px",
-    "--cardExpandedWidth": "600px", // keep in sync with @media queries
+    "--cardExpandedWidth": "800px", // keep in sync with @media queries
     "--cardHeight": "270px",
-    "--cardExpandedHeight": "600px",
+    "--cardExpandedHeight": "100%",
     "--imgHeight": "180px",
     "--imgExpandedHeight": "250px",
     "--cardPadding": "20px",
     "--cardMargin": "20px",
-    "--borderRadius": "10px",
+    "--borderRadius": "30px",
     "--cardTitleSize": "23px",
 
     //animation
-    scrollToTime: 200,
-    "--openAnimTime": "0.2s",
-    "--imgAnimTime": "1s",
+    scrollToTime: 0,
+    "--openAnimTime": "0.4s",
+    "--imgAnimTime": "0.8s",
   }
 }

@@ -52,12 +52,12 @@ export default new Vuex.Store({
         this.commit("push", currentLine);
 
         // on mobile don't focus, or the keyboard will pop up every time
-        if (screen.width > 600 || block.focusAll) {
-          focus();
-        }
-        // if (progress < config.maxLinesUntilNoFocus || block.focusAll) {
+        // if (screen.width > 600 || block.focusAll) {
         //   focus();
         // }
+        if (progress < config.maxLinesUntilNoFocus || block.focusAll) {
+          focus();
+        }
 
         // new recursive call
         block.progress++;

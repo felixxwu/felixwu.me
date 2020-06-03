@@ -14,8 +14,8 @@
 
 <script>
 import Card from './Card'
-import config from './config'
-import setCss from './setCss'
+import config from './cssvars'
+import cssChangeActions from './cssChangeActions'
 
 export default {
   name: 'category',
@@ -38,22 +38,23 @@ export default {
     openCard(id) {
       this.category.cards.forEach((_, cardNo) => {
 
-        const card = document.getElementById(this.getID(cardNo))
-
+        
         if (cardNo === id && cardNo !== this.openedCard) {
-          setCss.expandCard(this.getID(cardNo))
-          setCss.expandImg(this.getID(cardNo))
+          cssChangeActions.expandCard(this.getID(cardNo))
+          cssChangeActions.expandImg(this.getID(cardNo))
 
+          // scroll to the card
+          const card = document.getElementById(this.getID(cardNo))
           setTimeout(() => {
             card.scrollIntoView({
               behavior: "smooth",
-              block: "center"
+              block: "start"
             });
           }, config.cssVars.scrollToTime);
 
         } else {
-          setCss.closeCard(this.getID(cardNo))
-          setCss.closeImg(this.getID(cardNo))
+          cssChangeActions.closeCard(this.getID(cardNo))
+          cssChangeActions.closeImg(this.getID(cardNo))
         }
 
       })

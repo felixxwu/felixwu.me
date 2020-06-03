@@ -58,7 +58,7 @@ export default {
   margin-bottom: 30px;
   /* margin-right: calc(var(--cardMargin) * 2); */
   /* margin-left: 0; */
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   display: inline-block;
   background-color: var(--white);
   max-width: var(--cardWidth);
