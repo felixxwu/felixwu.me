@@ -86,7 +86,7 @@ const commands = {
             felixxwu@gmail.com
 
             $b CV:
-            $lnk https://felixwu.me/cv
+            $lnk https://felixwu.me/cv.pdf
 
             $b GitHub:
             $lnk https://github.com/felixxwu
@@ -110,7 +110,7 @@ const commands = {
         store.dispatch("pushBlock", parse(
             `
         $h1 UNI>VER>SI>TY OF ED>IN>BURGH
-            First in Computer Science Bachelor's with Honours
+            Computer Science BEng Hons (First)
 
             $bcmd home
 

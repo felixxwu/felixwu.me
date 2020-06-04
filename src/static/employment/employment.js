@@ -16,7 +16,7 @@ export default () => {
         TrapIt Freelance Website Design (2018) - Delivered a blog-like page with post creation and editing. [React, Firebase]
         $cmd trapit
         
-        Viola Da Gamba Society Freelance Website Design (2016) - Delivered a complete redesign of the old VdGS website, including a new framework for the web administrator to continue development in the future. [Javascript]
+        Viola da Gamba Society Freelance Website Design (2016) - Delivered a complete redesign of the old VdGS website with a new framework for the web administrator to continue development in the future. [Javascript]
         $cmd vdgs
 
         Oxford University IT Services Intern (Summer 2015) - Created a simulation for how sound bounces around inside a 2D room. [NetLogo]
