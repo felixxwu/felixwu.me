@@ -111,13 +111,12 @@ export default function() {
 
   // increments charProgress or lineProgress accordingly
   const progress = () => {
-    terminalRef.current.scrollTop = terminalRef.current.scrollHeight
     try {
       if (charProgress < content[lineProgress - 1].length) {
         setCharProgress(charProgress + progressSpeed)
+        if (charProgress % 50 === 0) focus()
         return
       }
-      inputRef.current.focus()
       if (lineProgress < content.length) {
         if (content.length > maxHistory) {
           setContent(content.slice(1))
@@ -126,7 +125,13 @@ export default function() {
         }
         setCharProgress(0)
       }
+      focus()
     } catch (e) {}
+  }
+
+  const focus = () => {
+    terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+    inputRef.current.focus()
   }
 
   // COMPONENT /////////////////////////////////////////////////////////////////////////////////////

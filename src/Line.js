@@ -33,8 +33,15 @@ export default function(props) {
     const link = content.slice(5)
     return (
       <Line>
-        <a href={link}>{link}</a>
+        <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
       </Line>
+    )
+  } else if (content.startsWith('$img ')) {
+    const image = content.slice(5)
+    return (
+      <a href={'images/' + image} target="_blank" rel="noopener noreferrer">
+        <img src={'images/' + image} alt={image} height="250px"/>
+      </a>
     )
   } else if (content.startsWith('$hr')) {
     return (
