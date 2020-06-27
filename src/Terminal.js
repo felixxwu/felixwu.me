@@ -5,10 +5,10 @@ import commands from './commands.js'
 
 // constants
 const commandPrompt = 'user@felixwu.me:~$ '
-const boot = [
+const bootSequence = [
   'Loading...',
 ]
-const maxHistory = 50
+const maxHistory = 100
 const progressSpeed = 2
 
 export default function() {
@@ -27,8 +27,8 @@ export default function() {
   // the content of the terminal
   const [content, setContent] = useState([])
 
-  const [height, setHeight] = useState('30vh') // --> 100vh
-  const [width, setWidth] = useState('400px')  // --> 100vw
+  const [height, setHeight] = useState('30vh') // --> 800px
+  const [width, setWidth] = useState('400px')  // --> 90vw
 
   // every time the component finishes loading
   useEffect(() => {
@@ -69,11 +69,11 @@ export default function() {
 
   // start up animation / text
   const startup = () => {
-    addLines(boot)
+    addLines(bootSequence)
     setTimeout(() => {
       clear()
-      setWidth('100vw')
-      setHeight('100vh')
+      setWidth('900px')
+      setHeight('90vh')
     }, 1000);
     setTimeout(() => {
       addLines(commands.home.split('\n'))
@@ -209,13 +209,13 @@ const Terminal = styled.div`
   border-top: solid var(--black-lighter) 25px;
   border-radius: var(--border-radius);
   grid-area: mid;
-  max-width: 800px;
-  max-height: 90vh;
+  max-width: 100vw;
+  max-height: 100vh;
   padding: 10px;
   padding-top: 0;
   overflow: auto;
   background-color: var(--black);
   color: var(--white);
   box-shadow: 0 0 40px var(--black);
-  transition: 1.5s;
+  transition: 1s;
 `

@@ -28,14 +28,12 @@ a {
   color: var(--blue);
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   #terminal {
     border: none;
     border-radius: 0;
     width: 100vw !important;
     height: 100vh !important;
-    max-width: 100vw !important;
-    max-height: 100vh !important;
     transition: 0s;
   }
 }
@@ -53,5 +51,5 @@ a {
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: hsl(0, 0%, 33%);
 }
