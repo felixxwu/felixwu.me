@@ -27,6 +27,9 @@ export default function() {
   // the content of the terminal
   const [content, setContent] = useState([])
 
+  const [height, setHeight] = useState('30vh') // --> 100vh
+  const [width, setWidth] = useState('400px')  // --> 100vw
+
   // every time the component finishes loading
   useEffect(() => {
     // call progress, but every now and again use setTimeout so the maximum call stack
@@ -35,13 +38,8 @@ export default function() {
   })
 
   // only the first time the component loads
-  useEffect(() => {
-    addLines(boot)
-    setTimeout(() => {
-      addLines(commands.home.split('\n'))
-      inputRef.current.value = commandPrompt
-    }, 2000);
-  }, [])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => startup(), [])
 
   // HANDLERS //////////////////////////////////////////////////////////////////////////////////////
 
@@ -64,19 +62,39 @@ export default function() {
 
   // focus the input box every time the terminal is clicked
   const handleClick = (e) => {
-    inputRef.current.focus()
+    focus()
   }
 
   // FUNCTIONS /////////////////////////////////////////////////////////////////////////////////////
 
+  // start up animation / text
+  const startup = () => {
+    addLines(boot)
+    setTimeout(() => {
+      clear()
+      setWidth('100vw')
+      setHeight('100vh')
+    }, 1000);
+    setTimeout(() => {
+      addLines(commands.home.split('\n'))
+      inputRef.current.value = commandPrompt
+    }, 2000);
+
+  }
+
+  // enter a command to be processed
   const submitCommand = (command) => {
     // help command
     if (command === 'help' || command === '?') {
       addLines([
-        submitted(command),
+        '$sub ' + commandPrompt + command,
         '',
         'Available commands:',
         ...Object.keys(commands).sort().map(c => `$cmd ${c}`),
+        '$cmd help',
+        '$cmd ?',
+        '$cmd clear',
+        '$cmd reboot',
         ''
       ])
       return
@@ -84,37 +102,54 @@ export default function() {
 
     // clear command
     if (command === 'clear') {
-      setContent([])
-      setLineProgress(1)
-      setCharProgress(0)
+      clear()
+      return
+    }
+
+    // reboot command
+    if (command === 'reboot') {
+      inputRef.current.value = ''
+      clear()
+      startup()
       return
     }
 
     // normal command
     if (commands[command]) {
       const response = commands[command].split('\n')
-      addLines([submitted(command), ...response])
+      addLines([
+        '$sub ' + commandPrompt + command,
+        ...response
+      ])
 
     // unrecognised command
     } else {
-      addLines([submitted(command), `"${command}" is an unrecognised command. Type "help" or "?" for a list of commands.`])
+      addLines([
+        '$sub ' + commandPrompt + command,
+        `"${command}" is an unrecognised command. Type "help" or "?" for a list of commands.`
+      ])
     }
 
   }
-
-  const submitted = (command) => '$sub ' + commandPrompt + command
 
   // add lines to the terminal
   const addLines = (lines) => {
     setContent(content => content.concat(lines))
   }
 
+  // clear the terminal from all lines
+  const clear = () => {
+    setContent([])
+    setLineProgress(1)
+    setCharProgress(0)
+  }
+
   // increments charProgress or lineProgress accordingly
   const progress = () => {
+    focus()
     try {
       if (charProgress < content[lineProgress - 1].length) {
         setCharProgress(charProgress + progressSpeed)
-        if (charProgress % 50 === 0) focus()
         return
       }
       if (lineProgress < content.length) {
@@ -125,19 +160,21 @@ export default function() {
         }
         setCharProgress(0)
       }
-      focus()
     } catch (e) {}
   }
 
+  // give focus to the input box
   const focus = () => {
     terminalRef.current.scrollTop = terminalRef.current.scrollHeight
-    inputRef.current.focus()
+    if (typeof window.orientation === 'undefined') {
+      inputRef.current.focus()
+    }
   }
 
   // COMPONENT /////////////////////////////////////////////////////////////////////////////////////
 
   return (
-    <Terminal ref={terminalRef} onClick={handleClick} id="terminal">
+    <Terminal ref={terminalRef} onClick={handleClick} id="terminal"style={{width, height}} >
       {
         // for every line from 0 to lineProgress
         content.slice(0, lineProgress).map((line, index) => {
@@ -170,14 +207,15 @@ const Input = styled.input`
 
 const Terminal = styled.div`
   border-top: solid var(--black-lighter) 25px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   grid-area: mid;
-  width: 100vw;
   max-width: 800px;
-  height: 90vh;
+  max-height: 90vh;
   padding: 10px;
+  padding-top: 0;
   overflow: auto;
   background-color: var(--black);
   color: var(--white);
   box-shadow: 0 0 40px var(--black);
+  transition: 1.5s;
 `

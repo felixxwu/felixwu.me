@@ -18,7 +18,7 @@ const App = styled.div`
   grid-template-columns: 1fr auto 1fr;
   width: 100vw;
   height: 100vh;
-  font-family: consolas;
+  font-family: monospace;
   font-size: 17px;
   overflow: hidden;
 `

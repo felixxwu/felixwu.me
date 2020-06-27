@@ -33,7 +33,6 @@ export default {
     $hr
     $bcmd home
   `,
-  clear: '',
   home: `
     $h1 FELIX WU
     Computer Science graduate from The University of Edinburgh.

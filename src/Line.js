@@ -40,7 +40,7 @@ export default function(props) {
     const image = content.slice(5)
     return (
       <a href={'images/' + image} target="_blank" rel="noopener noreferrer">
-        <img src={'images/' + image} alt={image} height="250px"/>
+        <Image src={'images/' + image} alt={image}/>
       </a>
     )
   } else if (content.startsWith('$hr')) {
@@ -78,4 +78,10 @@ const Command = styled.div`
 
 const Submitted = styled.div`
   color: var(--yellow);
+`
+
+const Image = styled.img`
+  height: 200px;
+  border-radius: var(--border-radius);
+  margin: 5px;
 `
