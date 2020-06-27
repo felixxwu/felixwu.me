@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+  word-break: break-word;
+  --black: hsl(30, 1%, 15%);
+  --black-lighter: hsl(30, 5%, 22%);
+  --white: hsl(30, 30%, 90%);
+  --blue: hsl(240, 100%, 85%);
+  --yellow: hsl(60, 100%, 50%);
+  --green: hsl(120, 50%, 80%);
+  --font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 0;
+  color: var(--green);
+}
+
+a {
+  color: var(--blue);
+}
+
+@media only screen and (max-width: 900px) {
+  #terminal {
+    border: none;
+    border-radius: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    /* padding: 0; */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--black-lighter);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
