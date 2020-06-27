@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import Line from './Line.js'
 import commands from './commands.js'
 
+// constants
 const commandPrompt = 'user@felixwu.me:~$ '
 const boot = [
   'Loading...',
 ]
-const maxHistory = 100
+const maxHistory = 50
+const progressSpeed = 2
 
 export default function() {
   const terminalRef = useRef(null)
@@ -23,7 +25,7 @@ export default function() {
   const [charProgress, setCharProgress] = useState(0)
 
   // the content of the terminal
-  const [content, setContent] = useState(boot)
+  const [content, setContent] = useState([])
 
   // every time the component finishes loading
   useEffect(() => {
@@ -32,9 +34,11 @@ export default function() {
     charProgress % 50 === 0 ? setTimeout(progress, 0) : progress()
   })
 
+  // only the first time the component loads
   useEffect(() => {
+    addLines(boot)
     setTimeout(() => {
-      addLines(commands.profile.split('\n'))
+      addLines(commands.home.split('\n'))
       inputRef.current.value = commandPrompt
     }, 2000);
   }, [])
@@ -107,10 +111,10 @@ export default function() {
 
   // increments charProgress or lineProgress accordingly
   const progress = () => {
+    terminalRef.current.scrollTop = terminalRef.current.scrollHeight
     try {
       if (charProgress < content[lineProgress - 1].length) {
-        setCharProgress(charProgress + 1)
-        if (charProgress % 10 === 0) terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+        setCharProgress(charProgress + progressSpeed)
         return
       }
       inputRef.current.focus()

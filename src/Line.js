@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 export default function(props) {
-  const content = props.content.trim()
+  const content = props.content.trim().split('>').join(String.fromCharCode(173))
   if (content.startsWith('$b ')) {
     return (
       <Line>
