@@ -10,7 +10,7 @@ export default `
     • RESTful API (JSON API)
     • Vue and Vuex frontend with the jsonapi-vuex library
 
-    See these slides for a good visual explaination of the main features:
+    See these slides for a good visual explanation of the main features:
     $lnk https://docs.google.com/presentation/d/1hC0ARHAVeDWvg32CgGt-9TvGQ4KT9Dvw-lKLDy_WSjg
 
     $b GitHub:

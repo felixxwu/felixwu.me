@@ -65,7 +65,7 @@ export default {
     Music Informatics,
     Machine Learning Practical,
     Honours Project (Machine Learning),
-    Data Mining and Exploration,
+    Software Architecture Process and Management,
     Compiling Techniques
 
     $b Year 3 - Average: First
