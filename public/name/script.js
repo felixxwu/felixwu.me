@@ -7,6 +7,10 @@ const getGoogleUrl = (text) => {
     return "https://google.com/search?q=" + text.split(' ').join('+')
 }
 
+const getGDomainsUrl = (text) => {
+    return "https://domains.google.com/registrar/search?searchTerm=" + text.split(' ').join('')
+}
+
 const getLinkUrl = (text) => {
     return "https://" + text.split(' ').join('') + ".com"
 }
@@ -25,7 +29,7 @@ const updateDOM = (name) => {
     google.href = getGoogleUrl(name)
     google.innerHTML = "Search " + name + " on Google"
     
-    link.href = getLinkUrl(name)
+    link.href = getGDomainsUrl(name)
     link.innerHTML = getLinkUrl(name)
 }
 
