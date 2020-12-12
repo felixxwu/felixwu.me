@@ -1,6 +1,9 @@
 export default `
     $h1 EM>PLOY>MENT
 
+    2Simple Software Developer (2020 - Now) - Current position. [VueJS, jQuery, PHP, Node]
+    $cmd twosimple
+
     School of Engineering IT Team Intern (Summer 2019) - Created a Vue component used for many database management related internal applications. [VueJS, REST API]
     $cmd engineering
     

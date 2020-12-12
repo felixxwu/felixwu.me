@@ -4,6 +4,7 @@ import employment from './employment/employment'
 import engineering from './employment/engineering'
 import trapit from './employment/trapit'
 import vdgs from './employment/vdgs'
+import twosimple from './employment/twosimple'
 
 // projects
 import chat from './projects/chat'
@@ -15,7 +16,7 @@ import projects from './projects/projects'
 
 export default {
   // employment
-  acoustics, employment, engineering, trapit, vdgs,
+  acoustics, employment, engineering, trapit, vdgs, twosimple,
 
   // projects
   chat, chessrobot, housegenerator, noxive, owme, projects, 
@@ -35,7 +36,7 @@ export default {
   `,
   home: `
     $h1 FELIX WU
-    Computer Science graduate from The University of Edinburgh.
+    Software developer at 2Simple.
     
     $b Email:
     felixxwu@gmail.com
