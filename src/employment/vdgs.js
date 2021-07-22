@@ -10,7 +10,6 @@ export default `
     $b Preview:
     $img vdgs.jpg
 
-    $hr
     $bcmd employment
     $bcmd home
 `

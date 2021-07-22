@@ -21,7 +21,6 @@ export default `
     $b Related:
     $cmd housegenerator
 
-    $hr
     $bcmd projects
     $bcmd home
 `

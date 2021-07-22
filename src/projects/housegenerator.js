@@ -21,7 +21,6 @@ export default `
     $b Related:
     $cmd chordgenerator
 
-    $hr
     $bcmd projects
     $bcmd home
 `

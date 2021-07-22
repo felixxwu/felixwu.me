@@ -9,7 +9,6 @@ export default `
     $b Preview:
     $img android_alarm.jpg
 
-    $hr
     $bcmd projects
     $bcmd home
 `

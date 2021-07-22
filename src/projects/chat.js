@@ -15,7 +15,6 @@ export default `
     $b Preview:
     $img encrypted_chat.jpg
 
-    $hr
     $bcmd projects
     $bcmd home
 `

@@ -18,7 +18,6 @@ export default `
     $b Related:
     $cmd secondwind
 
-    $hr
     $bcmd projects
     $bcmd home
 `

@@ -11,7 +11,6 @@ export default `
     $b Preview:
     $img second_wind.jpg
 
-    $hr
     $bcmd projects
     $bcmd home
 `

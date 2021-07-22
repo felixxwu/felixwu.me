@@ -21,7 +21,6 @@ export default `
     $img chess_1.jpg
     $img chess_2.jpg
 
-    $hr
     $bcmd projects
     $bcmd home
 `

@@ -4,6 +4,9 @@ export default `
     Noxive - My electronic music production hobby since 2014, with a website to browse and preview my discography. [Vue, Firebase]
     $cmd noxive
 
+    Superchess - A multiplayer web game based on chess but with more pieces and a configurable setup.
+    $cmd superchess
+
     Chess Robot Group Project (2019) - Lead a software team of 5 to develop a robot capable of playing chess on a physical board. Our team won second place out of 22 groups. [Python, PyTorch]
     $cmd chessrobot
 
@@ -19,6 +22,5 @@ export default `
     This website!
     $cmd about
 
-    $hr
     $bcmd home
 `

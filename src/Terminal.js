@@ -61,7 +61,7 @@ export default function() {
   }
 
   // focus the input box every time the terminal is clicked
-  const handleClick = (e) => {
+  const handleClick = () => {
     focus()
   }
 
@@ -134,6 +134,9 @@ export default function() {
 
   // add lines to the terminal
   const addLines = (lines) => {
+    if (content.length > 0) {
+      lines.unshift('$hr')
+    }
     setContent(content => content.concat(lines))
   }
 
@@ -174,14 +177,14 @@ export default function() {
   // COMPONENT /////////////////////////////////////////////////////////////////////////////////////
 
   return (
-    <Terminal ref={terminalRef} onClick={handleClick} id="terminal"style={{width, height}} >
+    <Terminal ref={terminalRef} onClick={handleClick} id="terminal" style={{width, height}} >
       {
         // for every line from 0 to lineProgress
         content.slice(0, lineProgress).map((line, index) => {
           // if the line isnt the last line, use the whole text from the line, otherwise print only 
           // chars 0 to charProgress
           const content = index === lineProgress - 1 ? line.slice(0, charProgress) : line
-          return <Line content={content} submitCommand={submitCommand} key={index}></Line>
+          return <Line content={content} submitCommand={submitCommand} key={index}/>
         })
       }
       <form onSubmit={handleSubmit} autoComplete="off">

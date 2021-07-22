@@ -16,6 +16,5 @@ export default `
     Oxford University IT Services Intern (Summer 2015) - Created a simulation for how sound bounces around inside a 2D room. [NetLogo]
     $cmd acoustics
 
-    $hr
     $bcmd home
 `

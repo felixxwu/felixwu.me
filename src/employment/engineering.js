@@ -24,7 +24,6 @@ export default `
     $lnk https://github.com/colinhiggs/pyramid-jsonapi
     $lnk https://github.com/mrichar1/jsonapi-vuex
 
-    $hr
     $bcmd employment
     $bcmd home
 `

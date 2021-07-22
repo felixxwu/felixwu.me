@@ -8,7 +8,6 @@ export default `
     $lnk https://2simple.com/
     $lnk https://linkedin.com/company/2simple/
 
-    $hr
     $bcmd employment
     $bcmd home
 `

@@ -22,7 +22,6 @@ export default `
     $b Related:
     $cmd owme
 
-    $hr
     $bcmd projects
     $bcmd home
 `

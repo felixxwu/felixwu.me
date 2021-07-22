@@ -13,13 +13,14 @@ import housegenerator from './projects/housegenerator'
 import noxive from './projects/noxive'
 import owme from './projects/owme'
 import projects from './projects/projects'
+import superchess from './projects/superchess'
 
 export default {
   // employment
   acoustics, employment, engineering, trapit, vdgs, twosimple,
 
   // projects
-  chat, chessrobot, housegenerator, noxive, owme, projects, 
+  chat, chessrobot, housegenerator, noxive, owme, projects, superchess,
 
   about: `
     $h1 ABOUT
@@ -31,7 +32,6 @@ export default {
 
     Tip: the command input supports tab-completion and history!
 
-    $hr
     $bcmd home
   `,
   home: `
@@ -47,7 +47,6 @@ export default {
     $b LinkedIn:
     $lnk https://linkedin.com/in/felixxwu
 
-    $hr
     $cmd employment
     $cmd projects
     $cmd education
@@ -99,15 +98,10 @@ export default {
     $b Detailed description of all courses:
     $lnk http://www.drps.ed.ac.uk/19-20/dpt/utcmpsi.htm
 
-    $hr
     $bcmd home
   `,
   skills: `
     $h1 TECH>NI>CAL SKILLS
-
-    $bcmd home
-
-    $hr
 
     $b SPOKEN LANGUAGES:
     English: fluent
@@ -127,7 +121,6 @@ export default {
     PHP
     C
 
-    $hr
     $bcmd home
   `,
 }

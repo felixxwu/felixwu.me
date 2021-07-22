@@ -8,7 +8,6 @@ export default `
     $b GitHub:
     $lnk https://github.com/felixxwu/CreatED-Ultrasound
 
-    $hr
     $bcmd projects
     $bcmd home
 `

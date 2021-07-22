@@ -22,7 +22,6 @@ export default `
     $img noxive.jpg
     $img noxive.com.jpg
 
-    $hr
     $bcmd projects
     $bcmd home
 `

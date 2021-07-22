@@ -9,7 +9,6 @@ export default `
     $b Preview:
     $img sudoku.jpg
 
-    $hr
     $bcmd projects
     $bcmd home
 `

@@ -21,7 +21,6 @@ export default `
     $b Related:
     $cmd noxive
 
-    $hr
     $bcmd projects
     $bcmd home
 `

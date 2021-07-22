@@ -7,7 +7,6 @@ export default `
     $b Preview:
     $img trapit.jpg
 
-    $hr
     $bcmd employment
     $bcmd home
 `

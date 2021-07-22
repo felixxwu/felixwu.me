@@ -20,7 +20,6 @@ export default `
     $b Related:
     $cmd flatapp
 
-    $hr
     $bcmd projects
     $bcmd home
 `
