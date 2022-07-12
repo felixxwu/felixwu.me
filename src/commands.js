@@ -5,22 +5,23 @@ import engineering from './employment/engineering'
 import trapit from './employment/trapit'
 import vdgs from './employment/vdgs'
 import twosimple from './employment/twosimple'
+import aspectfs from './employment/aspectfs'
 
 // projects
 import chat from './projects/chat'
 import chessrobot from './projects/chessrobot'
-import housegenerator from './projects/housegenerator'
 import noxive from './projects/noxive'
-import owme from './projects/owme'
 import projects from './projects/projects'
 import superchess from './projects/superchess'
+import dotsandmore from './projects/dotsandmore'
+import globalstate from './projects/globalstate'
 
 export default {
   // employment
-  acoustics, employment, engineering, trapit, vdgs, twosimple,
+  acoustics, employment, engineering, trapit, vdgs, twosimple, aspectfs,
 
   // projects
-  chat, chessrobot, housegenerator, noxive, owme, projects, superchess,
+  chat, chessrobot, noxive, projects, superchess, dotsandmore, globalstate,
 
   about: `
     $h1 ABOUT
@@ -30,8 +31,8 @@ export default {
     $b GitHub:
     $lnk https://github.com/felixxwu/felixwu.me
 
-    Tip: the command input supports tab-completion and history!
-
+    $hr
+    $b Navigation:
     $bcmd home
   `,
   home: `
@@ -39,7 +40,7 @@ export default {
     Software developer at 2Simple.
     
     $b Email:
-    felixxwu@gmail.com
+    $email felixxwu@gmail.com
     $b CV:
     $lnk https://felixwu.me/cv.pdf
     $b GitHub:
@@ -47,6 +48,7 @@ export default {
     $b LinkedIn:
     $lnk https://linkedin.com/in/felixxwu
 
+    $b Navigation:
     $cmd employment
     $cmd projects
     $cmd education
@@ -57,6 +59,12 @@ export default {
   education: `
     $h1 UNI>VER>SI>TY OF ED>IN>BURGH
     Computer Science BEng Hons (First)
+    Top class prize for best performance in degree
+
+    $b DISSERTATION
+
+    Optimisations in deep learning methods for Jazz chord generation. Created a very capable model and a grade of 80%.
+    $lnk https://drive.google.com/file/d/1tHMrPDalsnq9FjA-rvCfZ0f7pkl9bgHy/view
 
     $b COURSES
 
@@ -98,6 +106,8 @@ export default {
     $b Detailed description of all courses:
     $lnk http://www.drps.ed.ac.uk/19-20/dpt/utcmpsi.htm
 
+    $hr
+    $b Navigation:
     $bcmd home
   `,
   skills: `
@@ -106,21 +116,30 @@ export default {
     $b SPOKEN LANGUAGES:
     English: fluent
     German: fluent
-    Cantonese: conversant
+    Cantonese: rusty
 
     $b MOST COMPETENT IN:
-    Javascript (+ Vue, React, Node)
-    Python
-    Android (Java / Kotlin)
-    Unity (C#)
-    Machine Learning (PyTorch)
+    JavaScript
+    TypeScript
+    Vue
+    React
+    Unit and e2e testing
+    HTML
+    CSS
+    Git
     
     $b LIMITED EXPERIENCE WITH:
+    Python
+    Java (+ Android / Kotlin)
+    Unity (C#)
+    Machine Learning (PyTorch)
     Matlab
     Haskell
     PHP
-    C
+    C/C++
 
+    $hr
+    $b Navigation:
     $bcmd home
   `,
 }

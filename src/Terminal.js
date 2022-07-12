@@ -6,9 +6,9 @@ import commands from './commands.js'
 // constants
 const commandPrompt = 'user@felixwu.me:~$ '
 const bootSequence = [
-  'Loading...',
+  'Loading OS...',
 ]
-const maxHistory = 100
+const maxHistory = 1000
 const progressSpeed = 2
 
 export default function() {
@@ -27,8 +27,8 @@ export default function() {
   // the content of the terminal
   const [content, setContent] = useState([])
 
-  const [height, setHeight] = useState('30vh') // --> 800px
-  const [width, setWidth] = useState('400px')  // --> 90vw
+  const [height, setHeight] = useState('30vh') // --> 800px at startup
+  const [width, setWidth] = useState('400px')  // --> 90vw at startup
 
   // every time the component finishes loading
   useEffect(() => {
@@ -84,6 +84,7 @@ export default function() {
 
   // enter a command to be processed
   const submitCommand = (command) => {
+    clear()
     // help command
     if (command === 'help' || command === '?') {
       addLines([
@@ -134,9 +135,6 @@ export default function() {
 
   // add lines to the terminal
   const addLines = (lines) => {
-    if (content.length > 0) {
-      lines.unshift('$hr')
-    }
     setContent(content => content.concat(lines))
   }
 
@@ -168,7 +166,6 @@ export default function() {
 
   // give focus to the input box
   const focus = () => {
-    terminalRef.current.scrollTop = terminalRef.current.scrollHeight
     if (typeof window.orientation === 'undefined') {
       inputRef.current.focus()
     }
@@ -190,6 +187,7 @@ export default function() {
       <form onSubmit={handleSubmit} autoComplete="off">
         <Input ref={inputRef} onChange={handleTyping} spellCheck="false"/>
       </form>
+      <BottomSpace />
     </Terminal>
   );
 }
@@ -221,4 +219,8 @@ const Terminal = styled.div`
   color: var(--white);
   box-shadow: 0 0 40px var(--black);
   transition: 1s;
+`
+
+const BottomSpace = styled.div`
+  height: calc(100% -  1.2rem);
 `

@@ -18,9 +18,11 @@ export default `
     $b Preview:
     $img chord_generator.jpg
 
+    $hr
     $b Related:
     $cmd housegenerator
 
+    $b Navigation:
     $bcmd projects
     $bcmd home
 `

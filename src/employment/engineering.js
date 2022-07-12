@@ -19,11 +19,13 @@ export default `
     $b Preview:
     $img engineering.jpg
 
-    $b Related:
+    $b Links:
     $lnk https://jsonapi.org
     $lnk https://github.com/colinhiggs/pyramid-jsonapi
     $lnk https://github.com/mrichar1/jsonapi-vuex
-
+    
+    $hr
+    $b Navigation:
     $bcmd employment
     $bcmd home
 `

@@ -10,6 +10,8 @@ export default `
     $b Images:
     $img room_acoustics.jpg
     
+    $hr
+    $b Navigation:
     $bcmd employment
     $bcmd home
 `

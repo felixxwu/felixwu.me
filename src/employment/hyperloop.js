@@ -10,6 +10,8 @@ export default `
     $b Preview:
     $img hyped.jpg
 
+    $hr
+    $b Navigation:
     $bcmd employment
     $bcmd home
 `

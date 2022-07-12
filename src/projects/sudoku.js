@@ -9,6 +9,8 @@ export default `
     $b Preview:
     $img sudoku.jpg
 
+    $hr
+    $b Navigation:
     $bcmd projects
     $bcmd home
 `

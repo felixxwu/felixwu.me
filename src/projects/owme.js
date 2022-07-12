@@ -17,9 +17,11 @@ export default `
     $b Preview:
     $img owme.jpg
 
+    $hr
     $b Related:
     $cmd flatapp
 
+    $b Navigation:
     $bcmd projects
     $bcmd home
 `

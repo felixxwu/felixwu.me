@@ -18,9 +18,11 @@ export default `
     $b Preview:
     $img noxive.com.jpg
 
+    $hr
     $b Related:
     $cmd noxive
 
+    $b Navigation:
     $bcmd projects
     $bcmd home
 `

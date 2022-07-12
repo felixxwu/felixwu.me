@@ -2,7 +2,7 @@ export default `
     $h1 CHESS RO>BOT GROUP PRO>JECT
     (2019)
 
-    As the leader of the software team of 5, I was in charge of holding weekly meetings, discussing ideas, constructing a plan of attack, and distributing tasks and deadlines. Our robot was capable of scanning the state of any chess board, querying a chess AI for a move to play, then send instructions to a robotic arm to execute the move. We trained a machine learning classifier running on a server to recognise the positions of the pieces on the board, and used a RESTful API to talk to the Raspberry Pi to execute arm movement. My main task was to write code to interface with the robotic arm. Our robot won second place out of 22 groups.
+    Lead a software team of 5 to develop a robot capable of playing chess on a physical chess board, using only a camera as input. Our team won second place in an Össur competition out of 22 groups.
 
     $b General overview of software tasks:
     • Find the boundaries of the chess board (most chess boards work)
@@ -21,6 +21,8 @@ export default `
     $img chess_1.jpg
     $img chess_2.jpg
 
+    $hr
+    $b Navigation:
     $bcmd projects
     $bcmd home
 `

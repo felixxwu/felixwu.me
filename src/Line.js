@@ -36,6 +36,13 @@ export default function(props) {
         <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
       </Line>
     )
+  } else if (content.startsWith('$email ')) {
+    const link = content.slice(7)
+    return (
+      <Line>
+        <a href={`mailto: ${link}`} target="_blank" rel="noopener noreferrer">{link}</a>
+      </Line>
+    )
   } else if (content.startsWith('$img ')) {
     const image = content.slice(5)
     return (
@@ -74,6 +81,10 @@ const Command = styled.div`
   color: var(--blue);
   font-weight: bold;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 const Submitted = styled.div`

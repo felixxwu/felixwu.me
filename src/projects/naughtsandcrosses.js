@@ -15,9 +15,11 @@ export default `
     $b Preview:
     $img naughts_and_crosses.jpg
 
+    $hr
     $b Related:
     $cmd secondwind
 
+    $b Navigation:
     $bcmd projects
     $bcmd home
 `
