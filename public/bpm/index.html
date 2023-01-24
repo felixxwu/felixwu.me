@@ -53,15 +53,17 @@
             document.getElementById('large').innerHTML = bpm ? `${Math.round(bpm)} bpm` : 'Tap';
             document.getElementById('small').innerHTML = bpm ? `(${Math.round(bpm * 100) / 100})` : '';
 
-            document.getElementById('bars').innerHTML = ''
-            for (const interval of getIntervals()) {
-                const bar = document.createElement('div')
-                bar.style.width = getBPM(interval) + 'px'
-                bar.style.height = '2px'
-                bar.style.minHeight = '2px'
-                bar.style.backgroundColor = '#888'
-                document.getElementById('bars').prepend(bar)
+            if (taps.length === 0) {
+                document.getElementById('bars').innerHTML = ''
             }
+            const intervals = getIntervals()
+            const last = intervals[intervals.length - 1]
+            const bar = document.createElement('div')
+            bar.style.width = getBPM(last) + 'px'
+            bar.style.height = '2px'
+            bar.style.minHeight = '2px'
+            bar.style.backgroundColor = '#888'
+            document.getElementById('bars').prepend(bar)
         }
 
 
